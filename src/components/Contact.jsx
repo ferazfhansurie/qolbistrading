@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion'
 import './Contact.css'
 
 export default function Contact() {
@@ -11,24 +10,12 @@ export default function Contact() {
   return (
     <section className="contact" id="contact">
       <div className="container">
-        <motion.div 
-          className="section-header"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
+        <div className="section-header">
           <h2>Get In Touch</h2>
           <p>Ready to talk about your Meta Ads? We're here to listen and help you figure out the best approach.</p>
-        </motion.div>
+        </div>
 
-        <motion.div 
-          className="contact-content"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-        >
+        <div className="contact-content">
           <div className="contact-info">
             <div className="info-item">
               <div className="info-icon">📧</div>
@@ -82,16 +69,14 @@ export default function Contact() {
                 required 
               ></textarea>
             </div>
-            <motion.button 
+            <button 
               type="submit"
               className="btn btn-primary"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
             >
               Send Message
-            </motion.button>
+            </button>
           </form>
-        </motion.div>
+        </div>
       </div>
     </section>
   )

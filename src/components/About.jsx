@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion'
 import './About.css'
 
 export default function About() {
@@ -12,25 +11,13 @@ export default function About() {
   return (
     <section className="about" id="about">
       <div className="container">
-        <motion.div 
-          className="section-header"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
+        <div className="section-header">
           <h2>Who We Are</h2>
           <p>A team focused on one thing: making Meta Ads work for your business.</p>
-        </motion.div>
+        </div>
 
         <div className="about-content">
-          <motion.div 
-            className="about-text"
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div className="about-text">
             <h3>Real Experience, Real Results</h3>
             <p>
               We've built and optimized hundreds of Meta Ad campaigns across different industries. That experience isn't theoretical—it's the foundation of everything we do. We know what works because we've seen it work repeatedly.
@@ -47,35 +34,21 @@ export default function About() {
               <li>Data-driven decisions, not guesswork</li>
               <li>Flexible packages for businesses of all sizes</li>
             </ul>
-          </motion.div>
-            <ul className="about-list">
-              <li>Certified Meta Ads specialists</li>
-              <li>Data-driven strategy and optimization</li>
-              <li>Transparent reporting and communication</li>
-              <li>Custom solutions for every budget</li>
-            </ul>
-          </motion.div>
+          </div>
 
-          <motion.div 
-            className="about-stats"
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div className="about-stats">
             <div className="stats-grid">
               {stats.map((stat, idx) => (
-                <motion.div 
-                  key={idx}
+                <div 
+                  key={stat.number + idx}
                   className="stat-box"
-                  whileHover={{ y: -4 }}
                 >
                   <div className="stat-number">{stat.number}</div>
                   <div className="stat-label">{stat.label}</div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

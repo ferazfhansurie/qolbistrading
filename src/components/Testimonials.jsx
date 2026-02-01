@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion'
 import './Testimonials.css'
 
 export default function Testimonials() {
@@ -6,7 +5,7 @@ export default function Testimonials() {
     {
       name: 'Ahmad Hassan',
       company: 'Fashion E-Commerce',
-      text: 'Within 3 months, we went from breaking even to 15x ROAS. Adletic truly understands Meta Ads.',
+      text: 'Within 1 month, we went from breaking even to 15x ROAS. Adletic truly understands Meta Ads.',
       rating: 5
     },
     {
@@ -23,53 +22,19 @@ export default function Testimonials() {
     }
   ]
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.2
-      }
-    }
-  }
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5 }
-    }
-  }
-
   return (
     <section className="testimonials" id="testimonials">
       <div className="container">
-        <motion.div 
-          className="section-header"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
+        <div className="section-header">
           <h2>Loved by Our Clients</h2>
           <p>Real results from real businesses using Adletic</p>
-        </motion.div>
+        </div>
 
-        <motion.div 
-          className="testimonials-grid"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
+        <div className="testimonials-grid">
           {testimonials.map((testimonial, idx) => (
-            <motion.div 
+            <div 
               key={idx}
               className="testimonial-card"
-              variants={itemVariants}
-              whileHover={{ y: -8 }}
             >
               <div className="stars">
                 {'⭐'.repeat(testimonial.rating)}
@@ -79,9 +44,9 @@ export default function Testimonials() {
                 <strong>{testimonial.name}</strong>
                 <span>{testimonial.company}</span>
               </div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   )

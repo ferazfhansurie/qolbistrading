@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion'
 import './Benefits.css'
 
 export default function Benefits() {
@@ -35,60 +34,26 @@ export default function Benefits() {
     }
   ]
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2
-      }
-    }
-  }
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5 }
-    }
-  }
-
   return (
     <section className="benefits" id="benefits">
       <div className="container">
-        <motion.div 
-          className="section-header"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
+        <div className="section-header">
           <h2>How We Work</h2>
           <p>Simple, straightforward, and focused on your success.</p>
-        </motion.div>
+        </div>
 
-        <motion.div 
-          className="benefits-grid"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          {benefits.map((benefit, idx) => (
-            <motion.div 
-              key={idx}
+        <div className="benefits-grid">
+          {benefits.map((benefit) => (
+            <div 
+              key={benefit.title}
               className="benefit-card"
-              variants={itemVariants}
-              whileHover={{ y: -8, boxShadow: '0 12px 24px rgba(0, 0, 0, 0.1)' }}
             >
               <div className="benefit-icon">{benefit.icon}</div>
               <h3>{benefit.title}</h3>
               <p>{benefit.description}</p>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   )

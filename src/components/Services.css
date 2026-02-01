@@ -69,7 +69,7 @@
 
 .promo-badge {
   background: var(--accent-secondary);
-  color: var(--brand-navy);
+  color: var(--text-secondary);
 }
 
 .service-icon {

@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion'
 import './Services.css'
 
 export default function Services() {
@@ -36,67 +35,33 @@ export default function Services() {
     {
       id: 6,
       icon: '🎁',
-      title: 'First 5 Sign-Ups: 3 Months FREE',
-      description: 'Limited-time offer! First 5 sign-ups get 3 months of service completely free. Serious inquiries only.'
+      title: 'First 5 Sign-Ups: 1 month FREE',
+      description: 'Limited-time offer! First 5 sign-ups get 1 month of service completely free. Serious inquiries only.'
     }
   ]
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2
-      }
-    }
-  }
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5 }
-    }
-  }
 
   return (
     <section className="services" id="services">
       <div className="container">
-        <motion.div 
-          className="section-header"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
+        <div className="section-header">
           <h2>What You Get With Adletic</h2>
           <p>Complete lead generation solution with guaranteed low cost per lead</p>
-        </motion.div>
+        </div>
 
-        <motion.div 
-          className="services-grid"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
+        <div className="services-grid">
           {services.map((service) => (
-            <motion.div 
+            <div 
               key={service.id}
               className={`service-card ${service.id === 1 ? 'featured' : ''}`}
-              variants={itemVariants}
-              whileHover={{ y: -8 }}
             >
               <div className="service-icon">{service.icon}</div>
               <h3>{service.title}</h3>
               <p>{service.description}</p>
               {service.id === 1 && <div className="featured-badge">OBJECTIVE</div>}
               {service.id === 6 && <div className="promo-badge">LIMITED TIME</div>}
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   )

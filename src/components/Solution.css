@@ -1,0 +1,121 @@
+.solution-section {
+  padding: 100px 20px;
+  background: var(--bg-primary);
+  border-bottom: 3px solid var(--text-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.solution-section::before {
+  display: none;
+}
+
+.solution-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.solution-section .section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.solution-section .section-header h2 {
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  font-weight: 700;
+  color: var(--heading-primary);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.solution-section .section-header p {
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.solution-card {
+  position: relative;
+  padding: 40px;
+  background: var(--bg-primary);
+  border: 2px solid var(--text-primary);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.solution-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 6px 6px 0 var(--text-primary);
+}
+
+.solution-letter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background: var(--heading-primary);
+  border-radius: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--bg-primary);
+  margin-bottom: 20px;
+}
+
+.solution-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--heading-primary);
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.solution-card p {
+  color: var(--text-primary);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.framework-note {
+  text-align: center;
+  padding: 40px;
+  border-top: 3px solid var(--text-primary);
+  margin-top: 60px;
+}
+
+.framework-note p {
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  margin: 0;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .solution-section {
+    padding: 60px 20px;
+  }
+
+  .solutions-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .solution-card {
+    padding: 30px;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+  }
+}
