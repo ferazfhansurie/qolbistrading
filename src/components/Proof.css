@@ -29,12 +29,11 @@
 
 .proof-section .section-header h2 {
   font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 700;
+  font-weight: 900;
   margin-bottom: 15px;
-  background: linear-gradient(135deg, #f26522 0%, #ff8c42 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--heading-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .proof-section .section-header p {
@@ -82,10 +81,12 @@
 
 .testimonials-section h3 {
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 900;
   text-align: center;
   margin-bottom: 50px;
-  color: #1a1a1a;
+  color: var(--heading-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .testimonials-grid {
@@ -96,9 +97,13 @@
 
 .testimonial-card {
   background: #ffffff;
-  border: 1px solid rgba(242, 101, 34, 0.3);
+  border: 2px solid rgba(242, 101, 34, 0.3);
   border-radius: 15px;
   padding: 30px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);

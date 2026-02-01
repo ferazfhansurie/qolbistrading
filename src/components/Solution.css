@@ -46,11 +46,14 @@
 .solution-card {
   position: relative;
   padding: 40px;
-  background: var(--bg-primary);
-  border: 2px solid var(--text-primary);
+  background: #ffffff;
+  border: 2px solid rgba(242, 101, 34, 0.3);
+  border-radius: 15px;
   text-align: center;
   cursor: pointer;
   transition: all 0.2s ease;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .solution-card:hover {
@@ -64,11 +67,11 @@
   justify-content: center;
   width: 70px;
   height: 70px;
-  background: var(--heading-primary);
-  border-radius: 0;
+  background: rgba(242, 101, 34, 0.3);
+  border-radius: 15px;
   font-size: 2.5rem;
   font-weight: 700;
-  color: var(--bg-primary);
+  color: #f26522;
   margin-bottom: 20px;
 }
 

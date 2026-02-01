@@ -52,8 +52,8 @@ export default function Proof() {
     <section className="proof-section" id="proof">
       <div className="container">
         <div className="section-header">
-          <h2>Proven Results That Speak</h2>
-          <p>Real numbers. Real businesses. Real impact.</p>
+          <h2>SEE WHAT WINS LOOK LIKE</h2>
+          <p>Numbers don't lie. Our clients WIN. You will too.</p>
         </div>
 
         <div className="metrics-grid">
@@ -71,7 +71,7 @@ export default function Proof() {
         </div>
 
         <div className="testimonials-section">
-          <h3>What Our Clients Say</h3>
+          <h3>STORIES OF DOMINANCE</h3>
           
           <div className="testimonials-grid">
             {testimonials.map((testimonial) => (

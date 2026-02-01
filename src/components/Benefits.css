@@ -9,8 +9,12 @@
 }
 
 .section-header h2 {
-  color: var(--text-primary);
+  color: var(--heading-primary);
   margin-bottom: 1rem;
+  font-weight: 900;
+  font-size: clamp(2rem, 5vw, 3rem);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .section-header p {
@@ -27,15 +31,17 @@
 }
 
 .benefit-card {
-  background: linear-gradient(135deg, var(--bg-primary) 0%, rgba(242, 101, 34, 0.02) 100%);
-  border: 2px solid var(--border-light);
-  border-radius: 16px;
+  background: #ffffff;
+  border: 2px solid rgba(242, 101, 34, 0.3);
+  border-radius: 15px;
   padding: 2.5rem;
   text-align: center;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s ease;
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .benefit-card::before {
@@ -99,9 +105,12 @@
 }
 
 .benefit-card h3 {
-  color: var(--text-primary);
+  color: var(--heading-primary);
   margin-bottom: 1rem;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .benefit-card p {

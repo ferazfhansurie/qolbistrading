@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="footer-content">
           <div className="footer-section">
             <img src="/images/Adetic.png" alt="Adletic Agency" className="footer-logo-image" />
-            <h3 className="footer-logo">Adletic</h3>
+            <h3 className="footer-logo">AdleticAgency.MY</h3>
             <p className="footer-subtitle">Meta Ads Management</p>
             <p>We build campaigns that work. Simple strategy, smart optimization, real support.</p>
           </div>
