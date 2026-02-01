@@ -20,7 +20,7 @@ export default function Contact() {
             <div className="info-item">
               <div className="info-icon">📧</div>
               <h3>Email</h3>
-              <p><a href="mailto:hello@adletic.com">hello@adletic.com</a></p>
+              <p><a href="mailto:hello@adleticagency.com">hello@adleticagency.com</a></p>
             </div>
             <div className="info-item">
               <div className="info-icon">📱</div>

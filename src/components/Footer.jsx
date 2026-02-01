@@ -37,7 +37,7 @@ export default function Footer() {
           <div className="footer-section">
             <h4>Contact</h4>
             <ul>
-              <li><a href="mailto:hello@adletic.com">hello@adletic.com</a></li>
+              <li><a href="mailto:hello@adleticagency.com">hello@adleticagency.com</a></li>
               <li><a href="tel:+60112167672">+60 112 167 672</a></li>
               <li><a href="#contact">Get in Touch</a></li>
             </ul>
