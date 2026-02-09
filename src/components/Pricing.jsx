@@ -32,7 +32,7 @@ export default function Pricing() {
       cta: 'Get Started',
       highlighted: true
     },
-    {
+    { /** */
       id: 3,
       name: 'VIDEO PACKAGE',
       price: 'RM 1,050',
