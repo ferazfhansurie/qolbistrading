@@ -1,12 +1,6 @@
 import './Contact.css'
 
 export default function Contact() {
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    // Handle form submission here
-    alert('Thank you for your message! We\'ll get back to you soon.')
-  }
-
   return (
     <section className="contact" id="contact">
       <div className="container">
@@ -40,42 +34,16 @@ export default function Contact() {
             </div>
           </div>
 
-          <form className="contact-form" onSubmit={handleSubmit}>
-            <div className="form-group">
-              <input 
-                type="text" 
-                placeholder="Your Name" 
-                required 
-              />
-            </div>
-            <div className="form-group">
-              <input 
-                type="email" 
-                placeholder="Your Email" 
-                required 
-              />
-            </div>
-            <div className="form-group">
-              <input 
-                type="text" 
-                placeholder="Company Name" 
-                required 
-              />
-            </div>
-            <div className="form-group">
-              <textarea 
-                placeholder="Tell us about your goals..." 
-                rows="5"
-                required 
-              ></textarea>
-            </div>
-            <button 
-              type="submit"
+          <div className="whatsapp-cta">
+            <a 
+              href="https://api.whatsapp.com/send?phone=601121677672&text=Hi%20Adletic%20Agency,%20I%20would%20like%20to%20learn%20more%20about%20your%20services" 
+              target="_blank" 
+              rel="noopener noreferrer"
               className="btn btn-primary"
             >
-              Send Message
-            </button>
-          </form>
+              💬 Message Us on WhatsApp
+            </a>
+          </div>
         </div>
       </div>
     </section>
