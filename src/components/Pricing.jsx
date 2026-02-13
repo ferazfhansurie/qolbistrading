@@ -61,7 +61,7 @@ export default function Pricing() {
         </div>
 
         <div className="pricing-footer">
-          <p><strong>All packages:</strong> 30-Day Money Back Guarantee. Beli dengan confidence, walang risk.</p>
+          <p><strong>Lifetime Access:</strong> Unlimited updates at support para sa lahat.</p>
         </div>
       </div>
     </section>

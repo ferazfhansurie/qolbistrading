@@ -105,12 +105,8 @@ export default function ExclusiveOffer() {
             >
               MULAI BELAJAR - RM149.90
             </button>
-            <p className="urgency-text">30-day money-back guarantee if its not for you</p>
+            <p className="urgency-text"></p>
           </div>
-
-          <p className="guarantee-text">
-            <strong>Full Support:</strong> Baca ebook dalam first month, if walang value, money back fully. No questions asked. Our confidence sa quality.
-          </p>
         </div>
       </div>
     </section>
