@@ -41,7 +41,7 @@ export default function Objections() {
     <section className="objections-section" id="faq">
       <div className="container">
         <div className="section-header">
-          <h2>Common Questions About Moon Phase Trading</h2>
+          <h2>Soalan Lazim</h2>
           <p>Semua yang perlu kau ketahu sebelum beli ebook</p>
         </div>
 

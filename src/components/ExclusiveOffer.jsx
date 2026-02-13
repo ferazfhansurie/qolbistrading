@@ -37,7 +37,7 @@ export default function ExclusiveOffer() {
             🌙 MOON PHASE TRADING EBOOK
           </div>
 
-          <h2>Gateway Ke Profitable Trading</h2>
+          <h2>Tak Perlu Sentuh Duit Dalam Bank</h2>
           
           <div className="offer-highlight">
             <div className="highlight-box">
