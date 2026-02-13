@@ -7,33 +7,33 @@ export default function Objections() {
   const faqs = [
     {
       id: 1,
-      question: 'How is this different from other agencies?',
-      answer: 'Most agencies use one-size-fits-all strategies. We start with YOUR specific business goals, audience, and challenges. We\'re not trying to be the cheapest—we\'re trying to be the most profitable for you. You see daily reports, speak with a real human, and get strategy sessions weekly.'
+      question: 'Macam mana moonphase data boleh prevent capital burst?',
+      answer: 'Moonphase system teach kau predict market volatility periods using past lunar data correlation. Tau bila market expansive, bila consolidation. Filter over-trading traps. Bukan magic — it\s awareness of environmental factors yang technical alone tak detect. Dengan lunar timing, kau trade dengan arah and avoid blind spots yang cause burst losses.'
     },
     {
       id: 2,
-      question: 'What if my industry is too niche?',
-      answer: 'We\'ve successfully managed campaigns across dozens of industries—from e-commerce to SaaS, services to physical products. Meta\'s targeting is sophisticated. If your customers are on Meta, we can find them. We\'ll spend the first week understanding your niche and testing different approaches.'
+      question: 'Saya dah ada technical knowledge, tapi still loss. Ini berbeza ke?',
+      answer: 'Technical bagus untuk what is happening. Moonphase data explain why it happens. Presidential events, mass psychology shifts, lunar impacts — semua ni create pattern repeats dalam cycles. Ebook teach environmental awareness yang unlock steady equity curve even dengan full margin styles. Technical + moonphase = stronger direction system.'
     },
     {
       id: 3,
-      question: 'How long until I see results?',
-      answer: 'You\'ll see the first metrics within 2-3 weeks. Real conversions and scaling? Usually 6-8 weeks. We\'re not interested in vanity metrics. We track ROAS, leads, and actual business impact. Expect daily monitoring and weekly optimizations.'
+      question: 'Gimme mana control trading psychology dengan system ni?',
+      answer: 'System ajar kau reset mindset. Small step guiding untuk win back confidence. Aware bila kau trade with stress, sadness, atau too happy — semua affect decisions. Moonphase activity help reset mood. Real account strategies untuk regain equity steadily instead of burst attempts. Discipline comes from understand market behavior, not guessing.'
     },
     {
       id: 4,
-      question: 'What\'s included in the packages?',
-      answer: 'Every package includes: campaign strategy & setup, daily KPI monitoring, ad creative design (posters and/or videos), copywriting, audience targeting, retargeting, A/B testing, and weekly strategy calls. Our Video Package includes professional talent in your ads.'
+      question: 'Saya risau overtrade and full margin burst. Safe ke system ni?',
+      answer: 'System specifically address overtrade awareness. Check moonphase before trade untuk tau bila market traps. Start small capital first, feel trade warmth, have backup capital. Lunar data + technical filtering = confident TP points. Works even high risk styles sebab kau aware of ranges and volatility patterns ahead.'
     },
     {
       id: 5,
-      question: 'Can I cancel anytime?',
-      answer: 'Yes. No long-term contracts. Month-to-month basis. That said, most clients stay with us because they see results. If we\'re not delivering, you should leave. We\'d rather have you stay because you\'re seeing ROI.'
+      question: 'Bukan skim cepat kaya kan? What\s realistic expectation?',
+      answer: 'Bukan get-rich-quick. Kita tak janji perfect win streaks or meteoric profits. Real expectation: steady equity curve growth, better direction awareness, fewer blind spot losses. Moonphase data help predict ranges — bukan guarantee wins. Kau still need discipline, capital management, proper execution. System gives confident framework, bukan magic formula.'
     },
     {
       id: 6,
-      question: 'What if the ads don\'t work?',
-      answer: 'First 1 month: we optimize for free until campaigns are profitable. If it\'s just not working due to market conditions or your product fit, we\'ll be honest about it. But 98% of the time, the problem is strategy or creative—both things we fix.'
+      question: 'Berapa lama untuk master system dan nampak improvement?',
+      answer: 'E-course format buat kau understand basics dalam 1-2 weeks. Apply on small capital first month. Traders report aware market direction better within 3-4 weeks. Real steady profit? 2-3 bulan dengan consistent application. Remember: secure reserves capital first (money-lock suggestion), avoid double directions, trade relax mood. Patience beats burst attempts.'
     }
   ]
 
@@ -41,8 +41,8 @@ export default function Objections() {
     <section className="objections-section" id="faq">
       <div className="container">
         <div className="section-header">
-          <h2>Common Questions</h2>
-          <p>Everything you need to know before getting started</p>
+          <h2>Common Questions About Moon Phase Trading</h2>
+          <p>Semua yang perlu kau ketahu sebelum beli ebook</p>
         </div>
 
         <div className="faq-container">
@@ -69,7 +69,7 @@ export default function Objections() {
         </div>
 
         <div className="faq-cta">
-          <p>Still have questions? Let's talk.</p>
+          <p>Still have questions? Tanya kami directly.</p>
           <button 
             className="btn btn-secondary"
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}

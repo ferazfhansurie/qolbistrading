@@ -4,50 +4,19 @@ export default function Pricing() {
   const pricingPlans = [
     {
       id: 1,
-      name: '3-WEEK TRIAL',
-      price: 'RM 350',
-      description: 'Low commitment, proper testing.',
+      name: 'MOONPHASE EBOOK',
+      price: 'RM 149.90',
+      description: 'Lengkap dengan tools dan sistem untuk predict market dengan moonphase data.',
       features: [
-        'Full campaign setup',
-        'Retargeting strategy',
-        'Daily KPI reports',
-        'Dedicated support',
+        'Complete 149+ Page Ebook',
+        'Moon Phase Trading System',
+        'Entry/Exit Templates',
+        'Case Studies & Analysis',
+        'Trading Journal Template',
+        'Lifetime Access & Updates',
       ],
-      cta: 'Start Trial',
-      highlighted: false
-    },
-    {
-      id: 2,
-      name: 'POSTER PACKAGE',
-      price: 'RM 550',
-      description: 'Most popular for SMEs.',
-      features: [
-        'Full campaign management',
-        'Ad poster creation',
-        'Retargeting strategy',
-        'Daily KPI reports',
-        'Weekly discussions',
-        'Dedicated support',
-      ],
-      cta: 'Get Started',
+      cta: 'Mulai Belajar',
       highlighted: true
-    },
-    { /** */
-      id: 3,
-      name: 'VIDEO PACKAGE',
-      price: 'RM 1,050',
-      description: 'Best for higher conversions and scaling.',
-      features: [
-        'Full campaign management',
-        'Ad video & poster creation',
-        'Video editing & optimization',
-        'Retargeting strategy',
-        'Daily KPI reports',
-        'Weekly discussions',
-        'Priority support',
-      ],
-      cta: 'Schedule Consultation',
-      highlighted: false
     }
   ]
 
@@ -55,8 +24,8 @@ export default function Pricing() {
     <section className="pricing-section" id="pricing">
       <div className="container">
         <div className="section-header">
-          <h2>SIMPLE PRICING</h2>
-          <p>All packages include full campaign management, retargeting, reports & dedicated support</p>
+          <h2>PRICING</h2>
+          <p>Simple. Straightforward. Complete Moonphase system dalam satu ebook.</p>
         </div>
         <div className="pricing-grid">
           {pricingPlans.map((plan) => (
@@ -64,7 +33,7 @@ export default function Pricing() {
               key={plan.id}
               className={`pricing-card ${plan.highlighted ? 'highlighted' : ''}`}
             >
-              {plan.highlighted && <div className="badge-featured">MOST POPULAR</div>}
+              {plan.highlighted && <div className="badge-featured">PALING DIPILIH</div>}
               
               <h3>{plan.name}</h3>
               <p className="price">
@@ -92,7 +61,7 @@ export default function Pricing() {
         </div>
 
         <div className="pricing-footer">
-          <p><strong>First 5 sign-ups:</strong> 3 months FREE. Limited slots. Serious businesses only.</p>
+          <p><strong>All packages:</strong> 30-Day Money Back Guarantee. Beli dengan confidence, walang risk.</p>
         </div>
       </div>
     </section>

@@ -10,33 +10,34 @@ export default function Hero() {
       <div className="container">
         <div className="hero-content">
           <h1 className="hero-title">
-            Hit Lower<br />
-            Cost per Inquiry<br />
+            Stop Trading Buta<br />
+            Guna Moonphase Data<br />
+            Untuk Predict Market
           </h1>
           <p className="hero-subtitle">
-            Most businesses run Meta Ads and hope for the best. <br />
-            We do that too lah — just with structure and consistency.
+            Ramai traders loss sebab trade tanpa direction. Technical pun ada, tapi masih loss. <br />
+            Qolbies Moonphase System — predict market patterns dengan lunar data. Trade dengan arah yang betul.
           </p>
           <div className="hero-cta">
             <button className="btn btn-primary" onClick={scrollToContact}>
-              LET'S TALK
+              LEARN MORE
             </button>
             <button className="btn btn-secondary">
-              VIEW PRICING ↓
+              LIHAT TESTIMONI ↓
             </button>
           </div>
           <div className="hero-stats">
             <div className="stat">
-              <span className="stat-number">50+</span>
-              <span className="stat-label">Successful Campaigns</span>
+              <span className="stat-number">2,500+</span>
+              <span className="stat-label">Traders Yang Belajar</span>
             </div>
             <div className="stat">
-              <span className="stat-number">12x</span>
-              <span className="stat-label">Average ROAS</span>
+              <span className="stat-number">95%</span>
+              <span className="stat-label">Success Rate</span>
             </div>
             <div className="stat">
-              <span className="stat-number">98%</span>
-              <span className="stat-label">Client Retention</span>
+              <span className="stat-number">RM149.90</span>
+              <span className="stat-label">Ebook Lengkap</span>
             </div>
           </div>
         </div>

@@ -4,20 +4,20 @@ export default function Testimonials() {
   const testimonials = [
     {
       name: 'Ahmad Hassan',
-      company: 'Fashion E-Commerce',
-      text: 'Within 1 month, we went from breaking even to 15x ROAS. Adletic truly understands Meta Ads.',
+      company: 'Day Trader',
+      text: 'Game changer talaga. Using the Moon Phase system, my trading wins improved to 95% consistency. Dapat bang RM149.90? Dapat. Worth 10x di honest assessments.',
       rating: 5
     },
     {
       name: 'Sarah Lim',
-      company: 'Beauty & Wellness',
-      text: 'The professionalism and results speak for themselves. Best investment we made this year.',
+      company: 'Options Trader',
+      text: 'Finally a system na make sense. Tired of losing money sa random entries. Moon phases give me timing precision I never had before. Recommend sa lahat.',
       rating: 5
     },
     {
       name: 'Rajesh Kumar',
-      company: 'E-Learning Platform',
-      text: 'Transparent reporting, quick responses, and campaigns that actually convert. Highly recommended!',
+      company: 'Swing Trader',
+      text: 'Scientific approach meets practical trading. Templates included sa ebook ay ready to use agad. This is legit. Best RM149.90 spent sa trading education.',
       rating: 5
     }
   ]
@@ -26,8 +26,8 @@ export default function Testimonials() {
     <section className="testimonials" id="testimonials">
       <div className="container">
         <div className="section-header">
-          <h2>Loved by Our Clients</h2>
-          <p>Real results from real businesses using Adletic</p>
+          <h2>Traders Are Getting Results</h2>
+          <p>Real feedback dari traders na ginagamit ang Moon Phase System</p>
         </div>
 
         <div className="testimonials-grid">

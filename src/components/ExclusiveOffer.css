@@ -1,8 +1,9 @@
 .exclusive-offer-section {
   padding: 80px 20px;
-  background: #fafafa;
+  background: linear-gradient(135deg, #0F1419 0%, #16192B 100%);
   position: relative;
   overflow: hidden;
+  border-bottom: 2px solid rgba(255, 183, 0, 0.2);
 }
 
 .exclusive-offer-section::before {
@@ -12,9 +13,9 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle at 30% 50%, rgba(242, 101, 34, 0.15) 0%, transparent 50%),
-              radial-gradient(circle at 70% 70%, rgba(138, 43, 226, 0.15) 0%, transparent 50%),
-              radial-gradient(circle at 50% 0%, rgba(242, 101, 34, 0.1) 0%, transparent 60%);
+  background: radial-gradient(circle at 30% 50%, rgba(255, 183, 0, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 70% 70%, rgba(14, 203, 129, 0.08) 0%, transparent 50%),
+              radial-gradient(circle at 50% 0%, rgba(255, 183, 0, 0.08) 0%, transparent 60%);
   animation: moveGradient 15s ease infinite;
   pointer-events: none;
 }
@@ -35,31 +36,36 @@
 }
 
 .offer-content {
-  background: #ffffff;
-  border: 2px solid rgba(242, 101, 34, 0.4);
-  border-radius: 0;
+  background: rgba(22, 25, 43, 0.8);
+  border: 2px solid rgba(255, 183, 0, 0.5);
+  border-radius: 8px;
   padding: 60px 40px;
   backdrop-filter: blur(15px);
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(255, 183, 0, 0.2), inset 0 1px 0 rgba(255, 183, 0, 0.1);
 }
 
 .offer-badge {
   display: inline-block;
-  background: linear-gradient(135deg, #f26522 0%, #ff8c42 100%);
-  color: #ffffff;
+  background: linear-gradient(135deg, #F23645 0%, #FFB700 100%);
+  color: #FFFFFF;
   padding: 12px 25px;
-  border-radius: 0;
+  border-radius: 4px;
   font-weight: 700;
   font-size: 0.95rem;
   margin-bottom: 25px;
-  box-shadow: 0 10px 30px rgba(242, 101, 34, 0.3);
+  box-shadow: 0 10px 30px rgba(242, 54, 69, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .offer-content h2 {
   font-size: clamp(2rem, 5vw, 3.2rem);
   font-weight: 700;
-  color: var(--text-primary);
+  background: linear-gradient(135deg, #FFEB3B 0%, #00FF99 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin: 0 0 40px 0;
   line-height: 1.2;
 }
@@ -69,19 +75,19 @@
 }
 
 .highlight-box {
-  background: #ffffff;
-  border: 2px solid rgba(242, 101, 34, 0.5);
-  border-radius: 0;
+  background: rgba(14, 203, 129, 0.08);
+  border: 2px solid rgba(14, 203, 129, 0.5);
+  border-radius: 8px;
   padding: 40px 30px;
   backdrop-filter: blur(10px);
   max-width: 500px;
   margin: 0 auto;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(14, 203, 129, 0.2);
 }
 
 .highlight-box h3 {
   font-size: 1.3rem;
-  color: var(--text-primary);
+  color: #E8E8E8;
   margin: 0 0 20px 0;
   font-weight: 500;
 }
@@ -89,7 +95,7 @@
 .offer-amount {
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 700;
-  background: linear-gradient(135deg, #f26522 0%, #ff8c42 100%);
+  background: linear-gradient(135deg, #FFEB3B 0%, #FFB300 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -98,27 +104,27 @@
 }
 
 .highlight-box p {
-  color: var(--text-primary);
+  color: #E8E8E8;
   margin: 10px 0;
   font-size: 1.1rem;
 }
 
 .highlight-box .small-text {
   font-size: 0.95rem;
-  color: var(--text-secondary);
+  color: #C4C4C4;
   margin-top: 15px;
 }
 
 .countdown {
   margin: 50px 0;
   padding: 30px;
-  background: #f5f5f5;
-  border: 1px solid rgba(242, 101, 34, 0.3);
+  background: linear-gradient(135deg, rgba(14, 203, 129, 0.04) 0%, transparent 100%);
+  border: 1px solid rgba(14, 203, 129, 0.2);
   border-radius: 0;
 }
 
 .countdown-label {
-  color: var(--text-secondary);
+  color: #C4C4C4;
   font-size: 1rem;
   margin-bottom: 15px;
   display: block;
@@ -141,13 +147,14 @@
 .countdown-number {
   font-size: clamp(1.5rem, 4vw, 2.5rem);
   font-weight: 700;
-  color: #f26522;
+  color: #FFB700;
   display: block;
+  text-shadow: 0 0 20px rgba(255, 183, 0, 0.3);
 }
 
 .countdown-label-small {
   font-size: 0.85rem;
-  color: var(--text-secondary);
+  color: #C4C4C4;
   margin-top: 5px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -155,7 +162,7 @@
 
 .countdown-separator {
   font-size: 2rem;
-  color: #f26522;
+  color: #FFB700;
   font-weight: 700;
   margin: 0 5px;
 }
@@ -170,7 +177,7 @@
 
 .offer-benefits h4 {
   font-size: 1.3rem;
-  color: var(--text-primary);
+  color: #E8E8E8;
   margin-bottom: 25px;
   text-align: center;
 }
@@ -182,9 +189,9 @@
 }
 
 .offer-benefits li {
-  color: var(--text-primary);
+  color: #C4C4C4;
   padding: 12px 0;
-  border-bottom: 1px solid rgba(242, 101, 34, 0.2);
+  border-bottom: 1px solid rgba(14, 203, 129, 0.1);
   font-size: 1rem;
   line-height: 1.6;
 }
@@ -208,34 +215,34 @@
 
 @keyframes pulse {
   0%, 100% {
-    box-shadow: 0 0 0 0 rgba(242, 101, 34, 0.7);
+    box-shadow: 0 0 0 0 rgba(14, 203, 129, 0.7);
   }
   50% {
-    box-shadow: 0 0 0 15px rgba(242, 101, 34, 0);
+    box-shadow: 0 0 0 15px rgba(14, 203, 129, 0);
   }
 }
 
 .urgency-text {
-  color: var(--text-primary);
+  color: #E8E8E8;
   font-weight: 600;
   margin: 0;
   font-size: 1.05rem;
 }
 
 .highlight-text {
-  color: #ff8c42;
+  color: #FFB700;
   font-weight: 700;
 }
 
 .guarantee-text {
   font-size: 1rem;
-  color: var(--text-secondary);
+  color: #C4C4C4;
   line-height: 1.7;
   margin-top: 40px;
 }
 
 .guarantee-text strong {
-  color: #f26522;
+  color: #0ECB81;
 }
 
 @media (max-width: 768px) {

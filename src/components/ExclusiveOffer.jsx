@@ -12,11 +12,11 @@ export default function ExclusiveOffer() {
   useEffect(() => {
     const timer = setInterval(() => {
       const now = new Date()
-      const tomorrow = new Date(now)
-      tomorrow.setDate(tomorrow.getDate() + 1)
-      tomorrow.setHours(0, 0, 0, 0)
+      const endDate = new Date(now)
+      endDate.setDate(endDate.getDate() + 3) // 3 days from now
+      endDate.setHours(23, 59, 59, 999)
       
-      const diff = tomorrow - now
+      const diff = endDate - now
       
       setTimeLeft({
         days: Math.floor(diff / (1000 * 60 * 60 * 24)),
@@ -34,25 +34,35 @@ export default function ExclusiveOffer() {
       <div className="container">
         <div className="offer-content">
           <div className="offer-badge">
-            🎁 LIMITED TIME OFFER
+            🌙 MOON PHASE TRADING EBOOK
           </div>
 
-          <h2>Only For The Next 24 Hours</h2>
+          <h2>Gateway Ke Profitable Trading</h2>
           
           <div className="offer-highlight">
             <div className="highlight-box">
-              <h3>First 5 Sign-Ups Get</h3>
+              <h3>Moon Phase Trading Ebook</h3>
               <div className="offer-amount">
-                1 month FREE
+                RM 149.90
               </div>
-              <p>+ Free campaign audit worth RM 2,000</p>
-              <p className="small-text">Then just RM 550/month (Poster Package value)</p>
+              <p>Everything Kau Need Untuk Trade With System</p>
+              <p className="small-text">Includes lifetime access and free future updates</p>
             </div>
           </div>
 
           <div className="countdown">
-            <p className="countdown-label">Offer expires in:</p>
+            <p className="countdown-label">Available untuk download:</p>
             <div className="countdown-timer">
+              <div className="countdown-item">
+                <span 
+                  className="countdown-number"
+                  key={timeLeft.days}
+                >
+                  {String(timeLeft.days).padStart(2, '0')}
+                </span>
+                <span className="countdown-label-small">Days</span>
+              </div>
+              <span className="countdown-separator">:</span>
               <div className="countdown-item">
                 <span 
                   className="countdown-number"
@@ -72,43 +82,34 @@ export default function ExclusiveOffer() {
                 </span>
                 <span className="countdown-label-small">Minutes</span>
               </div>
-              <span className="countdown-separator">:</span>
-              <div className="countdown-item">
-                <span 
-                  className="countdown-number"
-                  key={timeLeft.seconds}
-                >
-                  {String(timeLeft.seconds).padStart(2, '0')}
-                </span>
-                <span className="countdown-label-small">Seconds</span>
-              </div>
             </div>
           </div>
 
           <div className="offer-benefits">
-            <h4>What You Get Immediately:</h4>
+            <h4>Included Sa Ebook:</h4>
             <ul>
-              <li>✓ FREE campaign audit & strategy session (RM 2,000 value)</li>
-              <li>✓ Full ad setup & optimization by our team</li>
-              <li>✓ Professional ad creatives (posters included)</li>
-              <li>✓ Daily KPI tracking & monitoring</li>
-              <li>✓ Weekly strategy calls with your dedicated team</li>
-              <li>✓ 1 month to prove we can deliver 2x ROAS</li>
+              <li>✓ 149.90+ Pages Complete Trading System</li>
+              <li>✓ Moon Phase Signals & Patterns Explained</li>
+              <li>✓ Entry/Exit Templates (Copy-Paste Ready)</li>
+              <li>✓ Real Case Studies From Actual Trades</li>
+              <li>✓ Psychological Trading Framework</li>
+              <li>✓ BONUS: Digital Trading Journal Template</li>
+              <li>✓ BONUS: Lifetime Updates (Free)</li>
             </ul>
           </div>
 
           <div className="offer-cta">
             <button 
-              className="btn btn-primary btn-large btn-pulse"
+              className="btn btn-primary btn-large"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              🚀 CLAIM MY SPOT NOW
+              MULAI BELAJAR - RM149.90
             </button>
-            <p className="urgency-text">Only <span className="highlight-text">5 spots</span> available at this price</p>
+            <p className="urgency-text">30-day money-back guarantee if its not for you</p>
           </div>
 
           <p className="guarantee-text">
-            <strong>Money-Back Guarantee:</strong> If we don't deliver at least 2x ROAS in 1 month, we'll keep optimizing for free. No questions asked.
+            <strong>Full Support:</strong> Baca ebook dalam first month, if walang value, money back fully. No questions asked. Our confidence sa quality.
           </p>
         </div>
       </div>

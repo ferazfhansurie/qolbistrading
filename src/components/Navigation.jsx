@@ -10,17 +10,17 @@ export default function Navigation() {
 
   const navItems = [
     { id: 'home', label: 'Home' },
-    { id: 'services', label: 'Services' },
-    { id: 'pricing', label: 'Pricing' },
-    { id: 'about', label: 'About' },
-    { id: 'contact', label: 'Contact' }
+    { id: 'solution', label: 'Sistem' },
+    { id: 'proof', label: 'Hasil' },
+    { id: 'pricing', label: 'Harga' },
+    { id: 'services', label: 'Kandungan' }
   ]
 
   return (
     <nav className="navigation">
       <div className="nav-container">
         <div className="nav-logo">
-          <img src="/images/Adetic.png" alt="Adletic Agency" className="logo-image" />
+          <span className="logo-text">🌙 Qolbies Trading</span>
         </div>
         <div className="nav-items">
           {navItems.map((item) => (
@@ -35,9 +35,9 @@ export default function Navigation() {
         </div>
         <button
           className="btn btn-primary"
-          onClick={() => scrollToSection('contact')}
+          onClick={() => scrollToSection('pricing')}
         >
-          Get Started
+          APA ITU QOLBIES
         </button>
       </div>
     </nav>

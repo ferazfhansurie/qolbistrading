@@ -1,21 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800;900&display=swap');
 
 :root {
-  /* Brand Color Scheme */
-  --bg-primary: #FFFFFF;
-  --bg-dark: #0B1E37;
-  --bg-grey: #F5F5F5;
-  --bg-secondary: #F5F5F5;
-  --text-primary: #4b4b4b; /* body / small text */
-  --heading-primary: #f26522; /* large headings */
-  --text-secondary: #000000;
+  /* Brand Color Scheme - Trading Platform Aesthetic */
+  --bg-primary: #0F1419;
+  --bg-dark: #0F1419;
+  --bg-grey: #1A1F2E;
+  --bg-secondary: #16192B;
+  --text-primary: #C4C4C4; /* body / chart text */
+  --heading-primary: #FFB700; /* gold for gains/highlight */
+  --text-secondary: #E8E8E8; /* light for headings */
   --text-light: #FFFFFF;
-  --accent: #f26522;
-  --accent-primary: #f26522;
-  --border-color: var(--heading-primary);
-  --border-light: #E8E8E8;
+  --accent: #0ECB81; /* bullish green */
+  --accent-primary: #0ECB81;
+  --accent-bearish: #F23645; /* bearish red */
+  --border-color: #2D3748;
+  --border-light: #3D4754;
   --brand-white: #FFFFFF;
-  --brand-navy: #6f6f6f;
+  --brand-navy: #0F1419;
+  --chart-grid: #2D3748;
+  --gold: #FFB700;
   
   /* Minimal shadows for performance */
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
@@ -45,7 +48,7 @@ html, body {
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
-  background: var(--bg-primary);
+  background: linear-gradient(135deg, #0F1419 0%, #16192B 100%);
 }
 
 /* Container */
@@ -68,18 +71,22 @@ h1 {
   font-size: clamp(3rem, 8vw, 5rem);
   margin-bottom: 1.5rem;
   font-weight: 700;
+  color: var(--text-light);
+  text-shadow: 0 0 30px rgba(255, 183, 0, 0.2);
 }
 
 h2 {
   font-size: clamp(2.2rem, 6vw, 3.5rem);
   margin-bottom: 1.25rem;
   font-weight: 700;
+  color: var(--heading-primary);
 }
 
 h3 {
   font-size: clamp(1.5rem, 4vw, 2rem);
   margin-bottom: 1rem;
   font-weight: 700;
+  color: var(--text-light);
 }
 
 p {
@@ -92,12 +99,12 @@ p {
 /* Buttons */
 .btn {
   padding: 12px 32px;
-  border: 2px solid var(--text-primary);
-  border-radius: 0;
+  border: 2px solid var(--heading-primary);
+  border-radius: 4px;
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
   font-family: 'Inter', sans-serif;
   display: inline-flex;
   align-items: center;
@@ -110,36 +117,38 @@ p {
 }
 
 .btn-primary {
-  background: var(--heading-primary);
-  color: var(--bg-primary);
+  background: linear-gradient(135deg, var(--heading-primary) 0%, #FFD700 100%);
+  color: #0F1419;
   border: 2px solid var(--heading-primary);
 } 
 
 .btn-primary:hover {
-  transform: translate(2px, -2px);
-  box-shadow: 4px 4px 0 var(--text-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 183, 0, 0.4);
+  background: linear-gradient(135deg, #FFD700 0%, var(--heading-primary) 100%);
 }
 
 .btn-secondary {
   background: transparent;
-  color: var(--text-primary);
-  border: 2px solid var(--text-primary);
+  color: var(--heading-primary);
+  border: 2px solid var(--heading-primary);
 }
 
 .btn-secondary:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: -4px 4px 0 var(--text-primary);
+  background: rgba(255, 183, 0, 0.1);
+  box-shadow: 0 0 15px rgba(255, 183, 0, 0.3);
+  transform: translateY(-2px);
 }
 
 .btn-outline-orange {
   background: transparent;
-  color: var(--text-primary);
-  border: 2px solid var(--text-primary);
+  color: var(--heading-primary);
+  border: 2px solid var(--heading-primary);
 }
 
 .btn-outline-orange:hover {
-  transform: translate(2px, -2px);
-  box-shadow: 4px 4px 0 var(--text-primary);
+  background: rgba(255, 183, 0, 0.1);
+  box-shadow: 0 0 15px rgba(255, 183, 0, 0.3);
 }
 
 .btn-large {

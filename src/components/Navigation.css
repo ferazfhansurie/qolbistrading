@@ -2,11 +2,12 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.96);
+  background: rgba(15, 20, 25, 0.98);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(242, 101, 34, 0.1);
-  border-bottom: 1px solid rgba(242, 101, 34, 0.12);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 183, 0, 0.2);
+  border-bottom: 2px solid rgba(14, 203, 129, 0.3);
+  border-top: 3px solid linear-gradient(90deg, #FFB700 0%, #0ECB81 100%);
   transition: all 0.3s ease;
 }
 
@@ -36,14 +37,18 @@
   font-family: 'Poppins', sans-serif;
   font-size: 1.5rem;
   font-weight: 800;
-  color: var(--text-secondary);
+  background: linear-gradient(90deg, #FFEB3B 0%, #00FF99 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   line-height: 1;
+  letter-spacing: -0.5px;
 }
 
 .logo-subtitle {
   font-size: 0.75rem;
   font-weight: 600;
-  color: var(--accent-primary);
+  color: #0ECB81;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -62,13 +67,15 @@
   font-size: 0.95rem;
   font-weight: 500;
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
   position: relative;
   padding: 0.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .nav-item:hover {
-  color: var(--accent-primary);
+  color: var(--heading-primary);
 }
 
 .nav-item::after {
@@ -78,21 +85,13 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+  background: linear-gradient(90deg, var(--heading-primary), var(--accent));
   transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-item:hover::after {
   width: 100%;
 }
-
-.nav-item:hover::after {
-  width: 100%;
-}
-
-  font-size: 1.5rem;
-  filter: grayscale(1);
-  transition: filter 0.3s ease;
 }
 
 .nav-item:hover .nav-icon,

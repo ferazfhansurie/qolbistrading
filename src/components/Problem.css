@@ -1,7 +1,7 @@
 .problem-section {
   padding: 100px 20px;
-  background: var(--bg-primary);
-  border-bottom: 3px solid var(--text-primary);
+  background: linear-gradient(135deg, #0F1419 0%, #16192B 100%);
+  border-bottom: 1px solid rgba(242, 38, 69, 0.2);
   position: relative;
   overflow: hidden;
 }
@@ -23,7 +23,10 @@
 .problem-section .section-header h2 {
   font-size: clamp(2.5rem, 6vw, 3.5rem);
   font-weight: 700;
-  color: var(--heading-primary);
+  background: linear-gradient(135deg, #F23645 0%, #FFB700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 0.02em;
@@ -31,33 +34,70 @@
 
 .problem-section .section-header p {
   font-size: 1.2rem;
-  color: var(--text-primary);
+  color: #C4C4C4;
   max-width: 600px;
   margin: 0 auto;
 } 
 
 .problems-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
   margin-bottom: 60px;
+  position: relative;
+}
+
+.problems-grid::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(90deg, rgba(242, 38, 69, 0.02) 1px, transparent 1px),
+    linear-gradient(rgba(242, 38, 69, 0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .problem-card {
-  background: #ffffff;
-  border: 2px solid rgba(242, 101, 34, 0.3);
-  border-radius: 15px;
-  padding: 25px;
+  background: linear-gradient(135deg, rgba(242, 38, 69, 0.04) 0%, rgba(242, 38, 69, 0.02) 100%);
+  border: 1px solid rgba(242, 38, 69, 0.2);
+  border-radius: 0;
+  padding: 20px;
   text-align: left;
   cursor: pointer;
-  transition: all 0.2s ease;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+  box-shadow: inset 0 1px 0 rgba(242, 38, 69, 0.1);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.problem-card::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #F23645, transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .problem-card:hover {
-  transform: translate(-3px, -3px);
-  box-shadow: 6px 6px 0 var(--text-primary);
+  transform: translateY(-3px);
+  border-color: rgba(242, 38, 69, 0.4);
+  box-shadow: inset 0 1px 0 rgba(242, 38, 69, 0.2), 0 4px 12px rgba(242, 38, 69, 0.15);
+  background: linear-gradient(135deg, rgba(242, 38, 69, 0.08) 0%, rgba(242, 38, 69, 0.04) 100%);
+}
+
+.problem-card:hover::before {
+  opacity: 1;
 }
 
 .problem-icon {
@@ -70,11 +110,11 @@
   font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 15px;
-  color: var(--heading-primary);
+  color: #FFB700;
 }
 
 .problem-card p {
-  color: var(--text-primary);
+  color: #C4C4C4;
   line-height: 1.7;
   font-size: 1rem;
 }

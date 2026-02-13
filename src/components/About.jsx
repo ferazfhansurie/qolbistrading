@@ -2,37 +2,37 @@ import './About.css'
 
 export default function About() {
   const stats = [
-    { number: '50+', label: 'Successful Campaigns' },
-    { number: '$5M+', label: 'Ad Spend Managed' },
-    { number: '12x', label: 'Average ROAS' },
-    { number: '98%', label: 'Business Satisfaction' }
+    { number: '2,500+', label: 'Traders Trained' },
+    { number: '95%', label: 'Win Rate' },
+    { number: '3.2x', label: 'Avg Returns' },
+    { number: '30-Day', label: 'Money Back Guarantee' }
   ]
 
   return (
     <section className="about" id="about">
       <div className="container">
         <div className="section-header">
-          <h2>Who We Are</h2>
-          <p>A team focused on one thing: making Meta Ads work for your business.</p>
+          <h2>Tentang System Kami</h2>
+          <p>Simple framework untuk timing yang consistent dan profits yang real.</p>
         </div>
 
         <div className="about-content">
           <div className="about-text">
-            <h3>Real Experience, Real Results</h3>
+            <h3>Moon Phase Trading Gimme Mana Function</h3>
             <p>
-              We've built and optimized hundreds of Meta Ad campaigns across different industries. That experience isn't theoretical—it's the foundation of everything we do. We know what works because we've seen it work repeatedly.
+              Kami develop ang system ini based sa scientific research tungkol sa moon cycles at market behavior. Walang spiritual nonsense — pure technical analysis combined with lunar timing patterns.
             </p>
             <p>
-              We don't promise unrealistic returns or use empty jargon. Instead, we're straightforward about what's possible, why it matters, and how we'll get you there. We also make sure you understand what we're doing every step of the way.
+              The system simple lang, but effective. Follow the signals, keep emotions out, document everything. That's it. Majority of traders fail because dili consistent sa approach. Moon Phase System removes the guessing game.
             </p>
             <p>
-              Whether you're just starting with Meta Ads or looking to improve underperforming campaigns, we meet you where you are and build a plan that actually fits your business.
+              Whether kau complete beginner o experienced trader na need ng better timing tool, system ito scalable sa lahat. Pre-made templates mean kau puwede mag-trade agad.
             </p>
             <ul className="about-list">
-              <li>Hands-on campaign management and optimization</li>
-              <li>Regular communication and transparent reporting</li>
-              <li>Data-driven decisions, not guesswork</li>
-              <li>Flexible packages for businesses of all sizes</li>
+              <li>Scientific approach based sa lunar cycles research</li>
+              <li>Step-by-step templates ready to use immediately</li>
+              <li>Real case studies from actual trades, not hypotheticals</li>
+              <li>Lifetime updates at 30-day money-back guarantee</li>
             </ul>
           </div>
 

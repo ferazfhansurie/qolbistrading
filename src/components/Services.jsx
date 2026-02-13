@@ -4,39 +4,39 @@ export default function Services() {
   const services = [
     {
       id: 1,
-      icon: '💰',
-      title: 'Cost Per Lead Below RM6.90',
-      description: 'We optimize every campaign for maximum lead generation efficiency.'
+      icon: '🌙',
+      title: 'Moonphase Data System untuk Predict Market',
+      description: 'Belajar gimme mana check moonphase past data untuk correlate dengan future trade ranges. Filter news noise dengan lunar patterns.'
     },
     {
       id: 2,
-      icon: '🎨',
-      title: 'Ad Video & Poster Creation',
-      description: 'High-converting ad creatives designed to capture attention and drive engagement on Meta platforms.'
+      icon: '👁️',
+      title: 'Blind Spot Awareness Training',
+      description: 'Discover environmental factors yang technical analysis alone tak detect. Presidential events, mass psychology, lunar impacts on behavior.'
     },
     {
       id: 3,
-      icon: '📊',
-      title: 'Daily KPI Report',
-      description: 'Track your campaign performance with daily key performance indicator reports. Stay updated on every metric that matters.'
+      icon: '�',
+      title: 'Steady Equity Curve Strategy',
+      description: 'System untuk grow portfolio steadily along market timelines. Avoid burst losses. Works even dengan high risk/full margin styles.'
     },
     {
       id: 4,
-      icon: '💬',
-      title: 'Weekly Discussion',
-      description: 'Regular strategy sessions to review results, optimize campaigns, and plan next steps for growth.'
+      icon: '🧠',
+      title: 'Reset Traders Mindset Framework',
+      description: 'Win back confidence dengan small step guiding. Real account strategies untuk regain equity. Control stress, sadness, happiness impacts.'
     },
     {
       id: 5,
-      icon: '⚡',
-      title: 'Zero-Cost Ad Setup',
-      description: 'Complete campaign setup with Meta Ads Manager configuration, targeting, and optimization at no extra cost.'
+      icon: '📋',
+      title: 'Real-Life Evidence Experience',
+      description: 'Case studies from actual market environments. Learn gimme mana inside & outside factors affect your trading portfolio dan decisions.'
     },
     {
       id: 6,
-      icon: '🎁',
-      title: 'First 5 Sign-Ups: 1 month FREE',
-      description: 'Limited-time offer! First 5 sign-ups get 1 month of service completely free. Serious inquiries only.'
+      icon: '🎯',
+      title: 'Safe Trading Direction System',
+      description: 'Apply moonphase data + technical boost untuk trade safely. Confident TP/take profit points. Avoid over-trading traps.'
     }
   ]
 
@@ -44,8 +44,8 @@ export default function Services() {
     <section className="services" id="services">
       <div className="container">
         <div className="section-header">
-          <h2>What You Get With Adletic</h2>
-          <p>Complete lead generation solution with guaranteed low cost per lead</p>
+          <h2>Qolbies Moonphase System Advantage</h2>
+          <p>Bukan sekadar technical analysis. Kita teach awareness of market blind spots using lunar data correlation.</p>
         </div>
 
         <div className="services-grid">
@@ -57,8 +57,8 @@ export default function Services() {
               <div className="service-icon">{service.icon}</div>
               <h3>{service.title}</h3>
               <p>{service.description}</p>
-              {service.id === 1 && <div className="featured-badge">OBJECTIVE</div>}
-              {service.id === 6 && <div className="promo-badge">LIMITED TIME</div>}
+              {service.id === 1 && <div className="featured-badge">CORE CONTENT</div>}
+              {service.id === 6 && <div className="promo-badge">BONUS</div>}
             </div>
           ))}
         </div>
