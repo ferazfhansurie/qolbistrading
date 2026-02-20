@@ -81,7 +81,7 @@ export default function Objections() {
               💬 WhatsApp Kami
             </a>
             <a
-              href="mailto:support@qolbiestrading.com"
+              href="mailto:adminmasterprince63@qolbiestrading.com"
               className="btn btn-secondary"
             >
               📧 Email Kami

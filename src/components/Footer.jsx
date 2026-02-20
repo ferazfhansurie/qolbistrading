@@ -23,8 +23,8 @@ export default function Footer() {
               >
                 💬 +60 112 167 672 (WhatsApp)
               </a>
-              <a href="mailto:support@qolbiestrading.com">
-                📧 support@qolbiestrading.com
+              <a href="mailto:adminmasterprince63@qolbiestrading.com">
+                📧 adminmasterprince63@qolbiestrading.com
               </a>
             </div>
           </div>

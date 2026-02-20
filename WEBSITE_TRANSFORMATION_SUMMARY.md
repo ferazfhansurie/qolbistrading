@@ -208,7 +208,7 @@ Successfully transformed the website from Adletic Agency (Meta Ads Management) t
 ### Contact Section
 - Changed from "Get In Touch for Meta Ads" to "Mula Journey Mu Sekarang"
 - WhatsApp link for ebook purchase
-- Email: support@qolbiestrading.com
+- Email: adminmasterprince63@qolbiestrading.com
 - Direct purchase link
 
 ### Footer
