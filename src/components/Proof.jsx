@@ -11,7 +11,7 @@ const testimonials = [
   },
   {
     id: 2,
-    name: 'Siti Nurhaliza',
+    name: 'Izwan Bahrin',
     role: 'Swing Trader (MT5)',
     stars: 5,
     quote:
