@@ -98,7 +98,7 @@ Here's comprehensive information about Firaz:
 PERSONAL INFO:
 - Name: Firaz Fhansurie
 - Location: Shah Alam, Selangor, Malaysia
-- Phone: +60 11-2167 7672
+- Phone: +60 17-895 3047
 - Email: ferazfhansurie@gmail.com
 - LinkedIn: firazfhansurie
 

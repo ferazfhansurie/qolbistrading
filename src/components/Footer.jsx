@@ -21,7 +21,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                💬 +60 112 167 672 (WhatsApp)
+                💬 +60 17-895 3047 (WhatsApp)
               </a>
               <a href="mailto:adminmasterprince63@qolbiestrading.com">
                 📧 adminmasterprince63@qolbiestrading.com
