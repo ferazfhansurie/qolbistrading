@@ -1,113 +1,154 @@
-import { useState, useEffect } from 'react'
 import './ExclusiveOffer.css'
 
+const products = [
+  {
+    id: 1,
+    tier: 'STARTER',
+    name: 'Ebook + Free Guiding Signal',
+    price: 'RM 149.90',
+    originalPrice: 'RM 350',
+    badge: '⭐ PALING POPULAR',
+    featured: false,
+    desc: 'Permulaan yang sempurna untuk traders yang ingin faham Moonphase Trade System dari asas.',
+    includes: [
+      '📖 Ebook Moonphase Trade System (Lengkap)',
+      '📊 Preview Database Moonphase (Free Access)',
+      '🎯 Guiding Signal — Entry & Exit Framework',
+      '💡 Case Studies Real Trades (Gold XAU)',
+      '🧠 Trading Psychology Framework',
+      '♾️ Lifetime Access + Free Updates',
+      '🛡️ 30-Hari Money Back Guarantee',
+    ],
+    cta: 'DAPATKAN EBOOK SEKARANG',
+  },
+  {
+    id: 2,
+    tier: 'PREMIUM',
+    name: 'Moonphase Database — 6 Bulan Access',
+    price: 'RM 497',
+    originalPrice: 'RM 1,200',
+    badge: '🔥 BEST VALUE',
+    featured: true,
+    desc: 'Akses penuh kepada Premium Moonphase Database selama 6 bulan. Worth lebih dari 10,000 USD!',
+    includes: [
+      '🌙 6 Bulan Access — Premium Moonphase Database',
+      '📈 Real-Time Lunar Correlation Data (Gold XAU)',
+      '🗓️ Monthly Moonphase Calendar & Forecast',
+      '⚡ High-Volatility Period Alerts',
+      '📖 Ebook Moonphase Trade System (Termasuk)',
+      '🎯 Guiding Signal Framework (Termasuk)',
+      '💬 Community Traders Access',
+      '🛡️ 30-Hari Money Back Guarantee',
+    ],
+    cta: 'AKSES DATABASE SEKARANG',
+  },
+  {
+    id: 3,
+    tier: 'ELITE',
+    name: 'Private Class — Mega Discussion',
+    price: 'RM 997',
+    originalPrice: 'RM 2,500',
+    badge: '💎 PALING COMPREHENSIVE',
+    featured: false,
+    desc: 'Khas untuk traders yang serius dan menghadapi isu kritikal. One-on-one dan group discussion bersama team Qolbies.',
+    includes: [
+      '👥 Private Class Access — Mega Discussion',
+      '🔴 LIVE Group Session Bersama Qolbies Team',
+      '🩺 Personal Trading Audit & Review',
+      '💼 Custom Strategy untuk Situasi Anda',
+      '🌙 6 Bulan Moonphase Database (Termasuk)',
+      '📖 Ebook + Guiding Signal (Termasuk)',
+      '⚡ Priority Support — Direct Access',
+      '🛡️ 30-Hari Money Back Guarantee',
+    ],
+    cta: 'DAFTAR PRIVATE CLASS',
+  },
+]
+
 export default function ExclusiveOffer() {
-  const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0
-  })
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      const now = new Date()
-      const endDate = new Date(now)
-      endDate.setDate(endDate.getDate() + 3) // 3 days from now
-      endDate.setHours(23, 59, 59, 999)
-      
-      const diff = endDate - now
-      
-      setTimeLeft({
-        days: Math.floor(diff / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((diff / 1000 / 60) % 60),
-        seconds: Math.floor((diff / 1000) % 60)
-      })
-    }, 1000)
-
-    return () => clearInterval(timer)
-  }, [])
+  const scrollToContact = () => {
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
+  }
 
   return (
-    <section className="exclusive-offer-section" id="exclusive-offer">
+    <section className="exclusive-offer-section" id="produk">
       <div className="container">
-        <div className="offer-content">
-          <div className="offer-badge">
-            🌙 MOON PHASE TRADING EBOOK
-          </div>
 
-          <h2>Tak Perlu Sentuh Duit Dalam Bank</h2>
-          
-          <div className="offer-highlight">
-            <div className="highlight-box">
-              <h3>Moon Phase Trading Ebook</h3>
-              <div className="offer-amount">
-                RM 149.90
-              </div>
-              <p>Everything Kau Need Untuk Trade With System</p>
-              <p className="small-text">Includes lifetime access and free future updates</p>
-            </div>
-          </div>
-
-          <div className="countdown">
-            <p className="countdown-label">Available untuk download:</p>
-            <div className="countdown-timer">
-              <div className="countdown-item">
-                <span 
-                  className="countdown-number"
-                  key={timeLeft.days}
-                >
-                  {String(timeLeft.days).padStart(2, '0')}
-                </span>
-                <span className="countdown-label-small">Days</span>
-              </div>
-              <span className="countdown-separator">:</span>
-              <div className="countdown-item">
-                <span 
-                  className="countdown-number"
-                  key={timeLeft.hours}
-                >
-                  {String(timeLeft.hours).padStart(2, '0')}
-                </span>
-                <span className="countdown-label-small">Hours</span>
-              </div>
-              <span className="countdown-separator">:</span>
-              <div className="countdown-item">
-                <span 
-                  className="countdown-number"
-                  key={timeLeft.minutes}
-                >
-                  {String(timeLeft.minutes).padStart(2, '0')}
-                </span>
-                <span className="countdown-label-small">Minutes</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="offer-benefits">
-            <h4>Included Sa Ebook:</h4>
-            <ul>
-              <li>✓ 149.90+ Pages Complete Trading System</li>
-              <li>✓ Moon Phase Signals & Patterns Explained</li>
-              <li>✓ Entry/Exit Templates (Copy-Paste Ready)</li>
-              <li>✓ Real Case Studies From Actual Trades</li>
-              <li>✓ Psychological Trading Framework</li>
-              <li>✓ BONUS: Digital Trading Journal Template</li>
-              <li>✓ BONUS: Lifetime Updates (Free)</li>
-            </ul>
-          </div>
-
-          <div className="offer-cta">
-            <button 
-              className="btn btn-primary btn-large"
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              MULAI BELAJAR - RM149.90
-            </button>
-            <p className="urgency-text"></p>
-          </div>
+        <div className="section-header">
+          <div className="section-badge">💰 PILIH PAKEJ ANDA</div>
+          <h2>
+            Mulakan Perjalanan Trading<br />
+            Anda Bersama Qolbies
+          </h2>
+          <p>
+            3 pakej direka khas untuk memenuhi keperluan traders di peringkat
+            yang berbeza.
+          </p>
         </div>
+
+        <div className="products-grid">
+          {products.map((p) => (
+            <div key={p.id} className={`product-card ${p.featured ? 'featured' : ''}`}>
+              {p.badge && <div className="product-badge">{p.badge}</div>}
+              <div className="product-tier">{p.tier}</div>
+              <h3 className="product-name">{p.name}</h3>
+              <div className="product-pricing">
+                <span className="product-original">{p.originalPrice}</span>
+                <span className="product-price">{p.price}</span>
+              </div>
+              <p className="product-desc">{p.desc}</p>
+              <ul className="product-includes">
+                {p.includes.map((item, idx) => (
+                  <li key={idx}>{item}</li>
+                ))}
+              </ul>
+              <button
+                className={`btn ${p.featured ? 'btn-primary' : 'btn-secondary'} btn-full`}
+                onClick={scrollToContact}
+              >
+                {p.cta}
+              </button>
+            </div>
+          ))}
+        </div>
+
+        {/* Money Back Guarantee */}
+        <div className="guarantee-block">
+          <div className="guarantee-icon">🛡️</div>
+          <h3>30-Hari Money Back Guarantee</h3>
+          <p>
+            Jika anda dah belajar sistem kami, apply ilmu yang dikongsi, tetapi
+            tiada sebarang perubahan dalam masa <strong>30 hari</strong> — kami
+            sedia pulangkan wang anda tanpa banyak soal.
+          </p>
+          <p>
+            Dengan syarat, berikan kami review tentang tindakan yang telah anda
+            ambil. Kami serius tentang hasil anda.
+          </p>
+        </div>
+
+        {/* Final CTA */}
+        <div className="offer-final-cta">
+          <h2>
+            Perjalanan Trading Yang Betul<br />
+            Bermula Di Sini
+          </h2>
+          <p>
+            Jangan tunggu lagi. Setiap hari yang berlalu tanpa Moonphase
+            awareness adalah hari lagi anda terdedah kepada losses yang boleh
+            dielak.
+          </p>
+          <button
+            className="btn btn-primary btn-large"
+            onClick={scrollToContact}
+          >
+            🌙 MULAKAN SEKARANG
+          </button>
+          <p className="offer-small-text">
+            Tawaran harga promo terhad. Daftar sebelum harga naik semula.
+          </p>
+        </div>
+
       </div>
     </section>
   )

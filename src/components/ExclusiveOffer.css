@@ -1,459 +1,203 @@
 .exclusive-offer-section {
   padding: 80px 20px;
-  background: linear-gradient(135deg, #0F1419 0%, #16192B 100%);
+  background: var(--bg-primary);
   position: relative;
   overflow: hidden;
-  border-bottom: 2px solid rgba(255, 183, 0, 0.2);
 }
 
 .exclusive-offer-section::before {
   content: '';
   position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle at 30% 50%, rgba(255, 183, 0, 0.1) 0%, transparent 50%),
-              radial-gradient(circle at 70% 70%, rgba(14, 203, 129, 0.08) 0%, transparent 50%),
-              radial-gradient(circle at 50% 0%, rgba(255, 183, 0, 0.08) 0%, transparent 60%);
-  animation: moveGradient 15s ease infinite;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(255, 183, 0, 0.07) 0%, transparent 60%);
   pointer-events: none;
-}
-
-@keyframes moveGradient {
-  0%, 100% {
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(-50px, -50px);
-  }
 }
 
 .exclusive-offer-section .container {
   position: relative;
   z-index: 1;
-  max-width: 900px;
 }
 
-.offer-content {
-  background: rgba(22, 25, 43, 0.8);
-  border: 2px solid rgba(255, 183, 0, 0.5);
-  border-radius: 8px;
-  padding: 60px 40px;
-  backdrop-filter: blur(15px);
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(255, 183, 0, 0.2), inset 0 1px 0 rgba(255, 183, 0, 0.1);
+/* Products grid */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 60px;
+  align-items: start;
 }
 
-.offer-badge {
+.product-card {
+  background: rgba(22, 25, 43, 0.9);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 32px 24px;
+  position: relative;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 183, 0, 0.3);
+}
+
+.product-card.featured {
+  border-color: rgba(255, 183, 0, 0.5);
+  background: rgba(255, 183, 0, 0.04);
+  box-shadow: 0 8px 30px rgba(255, 183, 0, 0.1);
+}
+
+.product-badge {
   display: inline-block;
-  background: linear-gradient(135deg, #F23645 0%, #FFB700 100%);
-  color: #FFFFFF;
-  padding: 12px 25px;
+  padding: 6px 14px;
+  background: linear-gradient(135deg, #FFB700 0%, #FF8C00 100%);
+  color: #0F1419;
   border-radius: 4px;
-  font-weight: 700;
-  font-size: 0.95rem;
-  margin-bottom: 25px;
-  box-shadow: 0 10px 30px rgba(242, 54, 69, 0.4);
+  font-size: 0.72rem;
+  font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.07em;
+  margin-bottom: 14px;
 }
 
-.offer-content h2 {
-  font-size: clamp(2rem, 5vw, 3.2rem);
+.product-tier {
+  font-size: 0.7rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #FFEB3B 0%, #00FF99 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin: 0 0 40px 0;
-  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #666;
+  margin-bottom: 8px;
 }
 
-.offer-highlight {
-  margin: 50px 0;
+.product-name {
+  font-size: 1rem !important;
+  color: #E8E8E8 !important;
+  font-weight: 700 !important;
+  margin-bottom: 16px;
+  line-height: 1.3;
 }
 
-.highlight-box {
-  background: rgba(14, 203, 129, 0.08);
-  border: 2px solid rgba(14, 203, 129, 0.5);
-  border-radius: 8px;
-  padding: 40px 30px;
-  backdrop-filter: blur(10px);
-  max-width: 500px;
-  margin: 0 auto;
-  box-shadow: 0 5px 15px rgba(14, 203, 129, 0.2);
-}
-
-.highlight-box h3 {
-  font-size: 1.3rem;
-  color: #E8E8E8;
-  margin: 0 0 20px 0;
-  font-weight: 500;
-}
-
-.offer-amount {
-  font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 700;
-  background: linear-gradient(135deg, #FFEB3B 0%, #FFB300 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-bottom: 15px;
-  line-height: 1.2;
-}
-
-.highlight-box p {
-  color: #E8E8E8;
-  margin: 10px 0;
-  font-size: 1.1rem;
-}
-
-.highlight-box .small-text {
-  font-size: 0.95rem;
-  color: #C4C4C4;
-  margin-top: 15px;
-}
-
-.countdown {
-  margin: 50px 0;
-  padding: 30px;
-  background: linear-gradient(135deg, rgba(14, 203, 129, 0.04) 0%, transparent 100%);
-  border: 1px solid rgba(14, 203, 129, 0.2);
-  border-radius: 0;
-}
-
-.countdown-label {
-  color: #C4C4C4;
-  font-size: 1rem;
-  margin-bottom: 15px;
-  display: block;
-}
-
-.countdown-timer {
+.product-pricing {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+  margin-bottom: 16px;
   flex-wrap: wrap;
 }
 
-.countdown-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.product-original {
+  font-size: 0.95rem;
+  color: #666;
+  text-decoration: line-through;
 }
 
-.countdown-number {
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
-  font-weight: 700;
-  color: #FFB700;
-  display: block;
-  text-shadow: 0 0 20px rgba(255, 183, 0, 0.3);
+.product-price {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 800;
+  background: linear-gradient(135deg, #FFB700 0%, #FFD700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.countdown-label-small {
-  font-size: 0.85rem;
-  color: #C4C4C4;
-  margin-top: 5px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+.product-desc {
+  font-size: 0.9rem;
+  color: #B0B0B0;
+  line-height: 1.65;
+  margin-bottom: 20px;
 }
 
-.countdown-separator {
-  font-size: 2rem;
-  color: #FFB700;
-  font-weight: 700;
-  margin: 0 5px;
-}
-
-.offer-benefits {
-  margin: 50px 0;
-  text-align: left;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.offer-benefits h4 {
-  font-size: 1.3rem;
-  color: #E8E8E8;
-  margin-bottom: 25px;
-  text-align: center;
-}
-
-.offer-benefits ul {
+.product-includes {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 24px;
 }
 
-.offer-benefits li {
+.product-includes li {
   color: #C4C4C4;
-  padding: 12px 0;
-  border-bottom: 1px solid rgba(14, 203, 129, 0.1);
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 0.88rem;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  line-height: 1.5;
 }
 
-.offer-benefits li:last-child {
-  border-bottom: none;
+.product-includes li:last-child { border-bottom: none; }
+
+.btn-full {
+  width: 100%;
+  justify-content: center;
 }
 
-.offer-cta {
-  margin: 50px 0 30px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
+/* Money back guarantee */
+.guarantee-block {
+  text-align: center;
+  padding: 50px 32px;
+  background: rgba(14, 203, 129, 0.04);
+  border: 2px solid rgba(14, 203, 129, 0.25);
+  border-radius: 12px;
+  max-width: 680px;
+  margin: 0 auto 60px;
 }
 
-.btn-pulse {
-  position: relative;
-  animation: pulse 2s infinite;
+.guarantee-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
 }
 
-@keyframes pulse {
-  0%, 100% {
-    box-shadow: 0 0 0 0 rgba(14, 203, 129, 0.7);
-  }
-  50% {
-    box-shadow: 0 0 0 15px rgba(14, 203, 129, 0);
-  }
-}
-
-.urgency-text {
-  color: #E8E8E8;
-  font-weight: 600;
-  margin: 0;
-  font-size: 1.05rem;
-}
-
-.highlight-text {
-  color: #FFB700;
-  font-weight: 700;
-}
-
-.guarantee-text {
-  font-size: 1rem;
-  color: #C4C4C4;
-  line-height: 1.7;
-  margin-top: 40px;
-}
-
-.guarantee-text strong {
+.guarantee-block h3 {
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
   color: #0ECB81;
+  margin-bottom: 16px;
+}
+
+.guarantee-block p {
+  font-size: 0.98rem;
+  color: #B0B0B0;
+  line-height: 1.75;
+  margin-bottom: 10px;
+}
+
+.guarantee-block strong { color: #E8E8E8; }
+
+/* Final CTA */
+.offer-final-cta {
+  text-align: center;
+  padding: 60px 32px;
+  background: rgba(255, 183, 0, 0.04);
+  border: 1px solid rgba(255, 183, 0, 0.2);
+  border-radius: 12px;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.offer-final-cta h2 {
+  margin-bottom: 16px;
+}
+
+.offer-final-cta p {
+  color: #B0B0B0;
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-bottom: 28px;
+}
+
+.offer-small-text {
+  font-size: 0.82rem !important;
+  color: #666 !important;
+  margin: 16px 0 0 !important;
+}
+
+@media (max-width: 900px) {
+  .products-grid { grid-template-columns: 1fr; gap: 20px; max-width: 480px; margin-left: auto; margin-right: auto; }
 }
 
 @media (max-width: 768px) {
-  .exclusive-offer-section {
-    padding: 60px 20px;
-  }
-
-  .exclusive-offer-section .container {
-    max-width: 100%;
-  }
-
-  .offer-content {
-    padding: 35px 20px;
-    border-radius: 0;
-  }
-
-  .offer-badge {
-    padding: 10px 20px;
-    font-size: 0.9rem;
-    margin-bottom: 20px;
-  }
-
-  .offer-content h2 {
-    font-size: clamp(1.5rem, 5vw, 2.5rem);
-    margin-bottom: 25px;
-  }
-
-  .offer-highlight {
-    margin: 35px 0;
-  }
-
-  .highlight-box {
-    padding: 25px 20px;
-    max-width: 100%;
-  }
-
-  .highlight-box h3 {
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-  }
-
-  .offer-amount {
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
-    margin-bottom: 10px;
-  }
-
-  .highlight-box p {
-    font-size: 1rem;
-    margin: 8px 0;
-  }
-
-  .highlight-box .small-text {
-    font-size: 0.9rem;
-    margin-top: 12px;
-  }
-
-  .countdown {
-    margin: 35px 0;
-    padding: 20px;
-  }
-
-  .countdown-label {
-    font-size: 0.95rem;
-    margin-bottom: 12px;
-  }
-
-  .countdown-timer {
-    gap: 5px;
-  }
-
-  .countdown-number {
-    font-size: clamp(1.2rem, 3vw, 2rem);
-  }
-
-  .countdown-label-small {
-    font-size: 0.8rem;
-  }
-
-  .countdown-separator {
-    font-size: 1.5rem;
-    margin: 0 3px;
-  }
-
-  .offer-benefits {
-    margin: 35px 0;
-    max-width: 100%;
-  }
-
-  .offer-benefits h4 {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-  }
-
-  .offer-benefits li {
-    padding: 10px 0;
-    font-size: 0.95rem;
-  }
-
-  .offer-cta {
-    margin: 35px 0 20px 0;
-    gap: 15px;
-  }
-
-  .urgency-text {
-    font-size: 1rem;
-  }
-
-  .guarantee-text {
-    font-size: 0.95rem;
-    margin-top: 30px;
-  }
+  .exclusive-offer-section { padding: 60px 20px; }
+  .guarantee-block { padding: 32px 20px; }
+  .offer-final-cta { padding: 40px 20px; }
 }
 
 @media (max-width: 480px) {
-  .exclusive-offer-section {
-    padding: 40px 16px;
-  }
-
-  .offer-content {
-    padding: 25px 16px;
-  }
-
-  .offer-badge {
-    padding: 8px 16px;
-    font-size: 0.8rem;
-    margin-bottom: 15px;
-  }
-
-  .offer-content h2 {
-    font-size: clamp(1.3rem, 4vw, 2rem);
-    margin-bottom: 20px;
-  }
-
-  .offer-highlight {
-    margin: 25px 0;
-  }
-
-  .highlight-box {
-    padding: 20px 15px;
-  }
-
-  .highlight-box h3 {
-    font-size: 1rem;
-    margin-bottom: 12px;
-  }
-
-  .offer-amount {
-    font-size: clamp(1.3rem, 3vw, 2rem);
-  }
-
-  .highlight-box p {
-    font-size: 0.95rem;
-    margin: 6px 0;
-  }
-
-  .highlight-box .small-text {
-    font-size: 0.85rem;
-  }
-
-  .countdown {
-    margin: 25px 0;
-    padding: 15px;
-  }
-
-  .countdown-label {
-    font-size: 0.9rem;
-    margin-bottom: 10px;
-  }
-
-  .countdown-timer {
-    gap: 3px;
-  }
-
-  .countdown-number {
-    font-size: clamp(1rem, 2vw, 1.5rem);
-  }
-
-  .countdown-label-small {
-    font-size: 0.75rem;
-  }
-
-  .countdown-separator {
-    font-size: 1.2rem;
-    margin: 0 2px;
-  }
-
-  .offer-benefits {
-    margin: 25px 0;
-  }
-
-  .offer-benefits h4 {
-    font-size: 1rem;
-    margin-bottom: 15px;
-  }
-
-  .offer-benefits li {
-    padding: 8px 0;
-    font-size: 0.9rem;
-  }
-
-  .offer-cta {
-    margin: 25px 0 15px 0;
-    gap: 12px;
-  }
-
-  .urgency-text {
-    font-size: 0.95rem;
-  }
-
-  .guarantee-text {
-    font-size: 0.9rem;
-    margin-top: 25px;
-  }
+  .exclusive-offer-section { padding: 44px 16px; }
+  .product-card { padding: 22px 16px; }
 }

@@ -1,37 +1,94 @@
 .hero {
-  min-height: 100vh;
+  min-height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 60px 20px 80px;
-  background: linear-gradient(135deg, #0F1419 0%, #16192B 50%, #0F1419 100%);
+  padding: 40px 20px 20px;
+  background: radial-gradient(circle at 60% 40%, #181c2a 0%, #0F1419 60%, #16192B 100%);
   position: relative;
   overflow: hidden;
-  border-bottom: 2px solid var(--border-light);
+  border-bottom: 2px solid rgba(255, 183, 0, 0.2);
 }
 
+/* Minimal stars background */
 .hero::before {
   content: '';
   position: absolute;
-  top: -50%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  /* Minimal Andromeda Galaxy (M31) and stars */
+  background-image:
+    /* Andromeda Galaxy core */
+    radial-gradient(circle at 60% 40%, rgba(255,255,255,0.18) 0px, rgba(255,255,255,0.12) 40px, rgba(255,255,255,0.05) 120px, transparent 200px),
+    /* Andromeda Galaxy disk */
+    radial-gradient(ellipse at 60% 40%, rgba(255,255,255,0.10) 0px, rgba(255,255,255,0.07) 120px, transparent 220px),
+    /* Minimal stars */
+    radial-gradient(circle, #fff 1.5px, transparent 2px),
+    radial-gradient(circle, #fff 1.5px, transparent 2px),
+    radial-gradient(circle, #fff 1.5px, transparent 2px),
+    radial-gradient(circle, #fff 1.5px, transparent 2px),
+    radial-gradient(circle, #fff 1.5px, transparent 2px),
+    radial-gradient(circle, #fff 1.5px, transparent 2px),
+    radial-gradient(circle, #fff 1.5px, transparent 2px),
+    radial-gradient(circle, #fff 1.5px, transparent 2px),
+    radial-gradient(circle, #fff 1.5px, transparent 2px),
+    radial-gradient(circle, #fff 1.5px, transparent 2px);
+  background-repeat: no-repeat;
+  background-position:
+    60% 40%, /* galaxy core */
+    60% 40%, /* galaxy disk */
+    10% 15%,
+    25% 30%,
+    40% 10%,
+    60% 20%,
+    80% 12%,
+    15% 60%,
+    35% 75%,
+    55% 65%,
+    75% 80%,
+    90% 55%;
+  background-size:
+    400px 400px,
+    600px 200px,
+    2px 2px,
+    2px 2px,
+    2px 2px,
+    2px 2px,
+    2px 2px,
+    2px 2px,
+    2px 2px,
+    2px 2px,
+    2px 2px,
+    2px 2px;
+  opacity: 0.8;
+}
+
+.hero-glow-before {
+  content: '';
+  position: absolute;
+  top: -40%;
   right: -10%;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(255, 183, 0, 0.08) 0%, transparent 70%);
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255, 183, 0, 0.07) 0%, transparent 70%);
   border-radius: 50%;
   z-index: 0;
   animation: drift 15s ease-in-out infinite;
   filter: blur(60px);
 }
 
-.hero::after {
+.hero-glow-after {
   content: '';
   position: absolute;
   bottom: -20%;
   left: 5%;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(14, 203, 129, 0.06) 0%, transparent 70%);
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(14, 203, 129, 0.04) 0%, transparent 70%);
   border-radius: 50%;
   z-index: 0;
   animation: drift 20s ease-in-out infinite reverse;
@@ -39,247 +96,268 @@
 }
 
 @keyframes drift {
-  0%, 100% {
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(30px, 30px);
-  }
+  0%, 100% { transform: translate(0, 0); }
+  50%       { transform: translate(30px, 30px); }
 }
 
 .hero .container {
   position: relative;
   z-index: 2;
+  width: 100%;
 }
 
+/* ── Content wrapper ── */
 .hero-content {
   text-align: center;
-  max-width: 800px;
+  max-width: 100vw;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
 }
 
+/* ── Alert badge ── */
+.hero-alert-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #b01e2c 0%, #8a1520 100%);
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 16px rgba(176, 30, 44, 0.4);
+}
+
+/* ── Main headline ── */
 .hero-title {
-  font-size: clamp(2rem, 6vw, 3.2rem);
+  font-size: clamp(1.4rem, 4vw, 2.8rem);
   font-weight: 800;
-  background: linear-gradient(135deg, #FFEB3B 0%, #00FF99 100%);
+  color: #E8E8E8;
+  line-height: 1.18;
+  margin-bottom: 18px;
+  letter-spacing: -0.02em;
+}
+
+.hero-title-highlight {
+  background: linear-gradient(135deg, #FFB700 0%, #FFD700 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  line-height: 1.2;
-  margin-bottom: 25px;
-  letter-spacing: -0.02em;
-  font-family: 'Poppins', 'Inter', sans-serif;
 }
 
-.hero-subtitle {
-  font-size: 1.05rem;
+/* ── Sub-headlines ── */
+.hero-subheadlines {
+  margin-bottom: 20px;
+}
+
+  background-image:
+    /* Andromeda Galaxy elliptical disk */
+    radial-gradient(ellipse at 60% 40%, rgba(255,255,255,0.13) 0px, rgba(255,255,255,0.09) 120px, transparent 220px),
+    /* Galaxy core */
+    radial-gradient(circle at 60% 40%, rgba(255,255,255,0.18) 0px, rgba(255,255,255,0.12) 40px, rgba(255,255,255,0.05) 120px, transparent 200px),
+    /* Galaxy tail */
+    linear-gradient(120deg, rgba(255,255,255,0.08) 0px, rgba(255,255,255,0.04) 120px, transparent 300px),
+    /* Minimal stars */
+    radial-gradient(circle, #fff 1.5px, transparent 2px),
+    radial-gradient(circle, #fff 1.5px, transparent 2px),
+    radial-gradient(circle, #fff 1.5px, transparent 2px),
+    radial-gradient(circle, #fff 1.5px, transparent 2px),
+    radial-gradient(circle, #fff 1.5px, transparent 2px),
+    radial-gradient(circle, #fff 1.5px, transparent 2px),
+    radial-gradient(circle, #fff 1.5px, transparent 2px),
+    radial-gradient(circle, #fff 1.5px, transparent 2px),
+    radial-gradient(circle, #fff 1.5px, transparent 2px),
+    radial-gradient(circle, #fff 1.5px, transparent 2px);
+  background-repeat: no-repeat;
+  background-position:
+    60% 40%, /* galaxy disk */
+    60% 40%, /* galaxy core */
+    70% 45%, /* galaxy tail */
+    10% 15%,
+    25% 30%,
+    40% 10%,
+    60% 20%,
+    80% 12%,
+    15% 60%,
+    35% 75%,
+    55% 65%,
+    75% 80%,
+    90% 55%;
+  background-size:
+    600px 200px,
+    400px 400px,
+    600px 80px,
+    2px 2px,
+    2px 2px,
+    2px 2px,
+    2px 2px,
+    2px 2px,
+    2px 2px,
+    2px 2px,
+    2px 2px,
+    2px 2px;
+  opacity: 0.85;
+  gap: 6px;
+}
+
+.hero-countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 183, 0, 0.08);
+  border: 1px solid rgba(255, 183, 0, 0.25);
+  border-radius: 6px;
+  padding: 8px 14px;
+  min-width: 62px;
+}
+
+.hero-countdown-num {
+  display: block;
+  font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+  font-weight: 800;
+  color: #FFB700;
+  line-height: 1;
+  text-shadow: 0 0 16px rgba(255, 183, 0, 0.35);
+}
+
+.hero-countdown-lbl {
+  display: block;
+  font-size: 0.68rem;
   color: #B0B0B0;
-  max-width: 600px;
-  margin: 0 auto 35px;
-  line-height: 1.65;
-  font-weight: 400;
-  letter-spacing: 0;
-  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 4px;
 }
 
+.hero-countdown-sep {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #FFB700;
+  line-height: 1;
+  margin-bottom: 16px;  /* push sep up to align with numbers */
+}
+
+/* ── CTA buttons ── */
 .hero-cta {
   display: flex;
-  gap: 15px;
+  gap: 14px;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 60px;
+  margin-bottom: 24px;
 }
 
+.hero-cta-main {
+  animation: pulse-cta 2.8s ease-in-out infinite;
+}
+
+@keyframes pulse-cta {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 183, 0, 0.5); }
+  50%       { box-shadow: 0 0 20px 8px rgba(255, 183, 0, 0.12); }
+}
+
+/* ── Stats ── */
 .hero-stats {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 30px;
-  max-width: 600px;
-  margin: 0 auto;
-  padding-top: 35px;
-  border-top: 1px solid rgba(255, 235, 59, 0.15);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  max-width: 520px;
+  width: 100%;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 183, 0, 0.12);
 }
 
 .stat {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 18px 15px;
-  border-radius: 0;
-  background: linear-gradient(180deg, rgba(255, 235, 59, 0.04) 0%, transparent 100%);
-  border: 1px solid rgba(255, 235, 59, 0.12);
-  border-top: 2px solid rgba(255, 235, 59, 0.3);
-  transition: all 0.3s ease;
+  padding: 12px 10px;
+  background: rgba(255, 183, 0, 0.03);
+  border: 1px solid rgba(255, 183, 0, 0.1);
+  border-top: 2px solid rgba(255, 183, 0, 0.28);
+  transition: transform 0.3s ease;
 }
 
-.stat:hover {
-  border-color: rgba(255, 235, 59, 0.25);
-  background: linear-gradient(180deg, rgba(255, 235, 59, 0.08) 0%, transparent 100%);
-  transform: translateY(-3px);
-}
+.stat:hover { transform: translateY(-2px); }
 
 .stat-number {
-  font-size: 2.2rem;
+  font-size: clamp(1rem, 2.2vw, 1.5rem);
   font-weight: 800;
-  background: linear-gradient(135deg, #FFEB3B 0%, #FFB300 100%);
+  background: linear-gradient(135deg, #FFB700 0%, #FFD700 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  margin-bottom: 6px;
-  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+  white-space: nowrap;
 }
 
 .stat-label {
-  font-size: 0.8rem;
-  color: #C4C4C4;
+  font-size: 0.7rem;
+  color: #888;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.07em;
   text-align: center;
 }
 
+/* ── Mobile ── */
 @media (max-width: 768px) {
   .hero {
-    min-height: auto;
-    padding: 100px 20px 60px;
-    border-bottom: 2px solid var(--text-primary);
+    padding: 80px 20px 36px;
   }
 
   .hero-title {
-    font-size: clamp(1.7rem, 7vw, 2.5rem);
-    margin-bottom: 20px;
-    line-height: 1.25;
+    font-size: clamp(1.5rem, 5.5vw, 2.4rem);
   }
 
-  .hero-subtitle {
-    font-size: 0.95rem;
-    margin-bottom: 30px;
-    line-height: 1.6;
+  .hero-urgency-box {
+    padding: 14px 16px;
+    max-width: 100%;
   }
 
-  .hero-cta {
-    gap: 12px;
-    margin-bottom: 50px;
+  .hero-countdown { gap: 4px; }
+
+  .hero-countdown-item {
+    min-width: 52px;
+    padding: 7px 10px;
   }
 
-  .hero::before {
-    width: 400px;
-    height: 400px;
-    top: -30%;
-    right: -20%;
-    animation: drift 12s ease-in-out infinite;
-  }
-
-  .hero::after {
-    width: 300px;
-    height: 300px;
-    bottom: -15%;
-    left: 0%;
-    animation: drift 15s ease-in-out infinite reverse;
-  }
-
-  .hero-title {
-    font-size: clamp(1.7rem, 6vw, 2.8rem);
-    margin-bottom: 18px;
-  }
-
-  .hero-subtitle {
-    font-size: 0.95rem;
-    margin-bottom: 28px;
-    line-height: 1.6;
-  }
+  .hero-countdown-sep { font-size: 1.3rem; }
 
   .hero-cta {
-    gap: 12px;
-    margin-bottom: 35px;
-    justify-content: center;
-  }
-
-  .btn {
-    padding: 12px 24px;
-    font-size: 0.9rem;
-    min-height: 44px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
 
   .hero-stats {
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 18px;
-    padding-top: 28px;
-  }
-
-  .stat {
-    padding: 15px 12px;
-  }
-
-  .stat-number {
-    font-size: 1.8rem;
-  }
-
-  .stat-label {
-    font-size: 0.75rem;
+    max-width: 100%;
+    gap: 10px;
   }
 }
 
 @media (max-width: 480px) {
   .hero {
-    padding: 80px 16px 40px;
-  }
-
-  .hero::before {
-    width: 300px;
-    height: 300px;
-    top: -40%;
-    right: -30%;
-    animation: drift 10s ease-in-out infinite;
-  }
-
-  .hero::after {
-    width: 250px;
-    height: 250px;
-    bottom: -20%;
-    left: -10%;
-    animation: drift 12s ease-in-out infinite reverse;
+    padding: 72px 16px 32px;
   }
 
   .hero-title {
-    font-size: clamp(1.4rem, 6vw, 2rem);
-    margin-bottom: 15px;
-    line-height: 1.3;
+    font-size: clamp(1.3rem, 5vw, 2rem);
   }
 
-  .hero-subtitle {
-    font-size: 0.88rem;
-    line-height: 1.55;
-    margin-bottom: 22px;
+  .hero-alert-badge {
+    font-size: 0.7rem;
+    padding: 7px 14px;
   }
 
-  .hero-cta {
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 30px;
-  }
+  .hero-countdown-item { min-width: 46px; padding: 6px 8px; }
+  .hero-countdown-num  { font-size: 1.4rem; }
 
-  .btn {
-    width: 100%;
-    padding: 12px 20px;
-    font-size: 0.85rem;
-  }
+  .btn { width: 100%; justify-content: center; }
 
-  .hero-stats {
-    grid-template-columns: 1fr;
-    gap: 12px;
-    padding-top: 22px;
-  }
-
-  .stat {
-    padding: 14px 16px;
-  }
-
-  .stat-number {
-    font-size: 1.6rem;
-  }
-
-  .stat-label {
-    font-size: 0.72rem;
-  }
+  .hero-stats { grid-template-columns: 1fr; gap: 8px; }
+  .stat { padding: 10px; }
 }

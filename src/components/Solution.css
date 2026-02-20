@@ -1,287 +1,232 @@
 .solution-section {
-  padding: 100px 20px;
-  background: linear-gradient(135deg, #0F1419 0%, #16192B 100%);
-  border-bottom: 1px solid rgba(14, 203, 129, 0.2);
-  position: relative;
+  padding: 80px 20px;
+  background: var(--bg-secondary);
   overflow: hidden;
 }
 
-.solution-section::before {
-  display: none;
-}
-
-.solution-section .container {
-  position: relative;
-  z-index: 1;
-}
-
-.solution-section .section-header {
+/* Reveal copy */
+.solution-reveal {
   text-align: center;
-  margin-bottom: 60px;
+  max-width: 780px;
+  margin: 0 auto 56px;
 }
 
-.solution-section .section-header h2 {
-  font-size: clamp(2.5rem, 6vw, 3.5rem);
-  font-weight: 700;
-  background: linear-gradient(135deg, #0ECB81 0%, #FFB700 100%);
+.reveal-body {
+  font-size: 1.05rem;
+  color: #C4C4C4;
+  line-height: 1.8;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.reveal-body strong { color: #E8E8E8; }
+
+.highlight-gold {
+  background: linear-gradient(135deg, #FFB700 0%, #FFD700 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
 }
 
-.solution-section .section-header p {
-  font-size: 1.2rem;
-  color: #C4C4C4;
-  max-width: 600px;
-  margin: 0 auto;
+/* JP Morgan image */
+.jpmorgan-block {
+  max-width: 780px;
+  margin: 0 auto 56px;
 }
 
-.solutions-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 12px;
-  margin-bottom: 60px;
-  position: relative;
-}
-
-.solutions-grid::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: 
-    linear-gradient(90deg, rgba(14, 203, 129, 0.03) 1px, transparent 1px),
-    linear-gradient(rgba(14, 203, 129, 0.03) 1px, transparent 1px);
-  background-size: 40px 40px;
-  pointer-events: none;
-  z-index: 0;
-  border-radius: 0;
-}
-
-.solution-card {
-  position: relative;
-  padding: 20px;
-  background: linear-gradient(135deg, rgba(14, 203, 129, 0.04) 0%, rgba(14, 203, 129, 0.02) 100%);
-  border: 1px solid rgba(14, 203, 129, 0.2);
-  border-radius: 0;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(5px);
-  box-shadow: inset 0 1px 0 rgba(14, 203, 129, 0.1);
-  z-index: 1;
+.jpmorgan-frame {
+  border: 2px solid rgba(255, 183, 0, 0.3);
+  border-radius: 10px;
   overflow: hidden;
 }
 
-.solution-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #0ECB81, transparent);
-  opacity: 0;
-  transition: opacity 0.3s ease;
+.jpmorgan-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
 }
 
-.solution-card:hover {
-  transform: translateY(-3px);
-  border-color: rgba(14, 203, 129, 0.4);
-  box-shadow: inset 0 1px 0 rgba(14, 203, 129, 0.2), 0 4px 12px rgba(14, 203, 129, 0.15);
-  background: linear-gradient(135deg, rgba(14, 203, 129, 0.08) 0%, rgba(14, 203, 129, 0.04) 100%);
+.jpmorgan-caption {
+  padding: 18px 22px;
+  background: rgba(22, 25, 43, 0.95);
+  border-top: 1px solid rgba(255, 183, 0, 0.2);
 }
 
-.solution-card:hover::before {
-  opacity: 1;
-}
-
-.solution-letter {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  background: transparent;
-  border: 1px solid #0ECB81;
-  border-radius: 0;
-  font-size: 2rem;
-  font-weight: 700;
-  color: #0ECB81;
-  margin-bottom: 15px;
-  position: relative;
-}
-
-.solution-letter::after {
-  content: '';
-  position: absolute;
-  top: -8px;
-  left: -8px;
-  right: -8px;
-  bottom: -8px;
-  border: 1px solid rgba(14, 203, 129, 0.2);
-  border-radius: 0;
-  pointer-events: none;
-}
-
-.solution-phase {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 60px;
-  height: 60px;
-  font-size: 2.5rem;
-  margin-bottom: 15px;
-  position: relative;
-}
-
-.solution-phase::before {
-  content: '';
-  position: absolute;
-  inset: -8px;
-  border: 1px solid rgba(14, 203, 129, 0.3);
-  pointer-events: none;
-}
-
-.phase-period {
-  font-size: 0.8rem;
+.caption-tag {
+  display: inline-block;
+  background: rgba(255, 183, 0, 0.15);
   color: #FFB700;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 5px;
-}
-
-.phase-market {
-  font-size: 0.85rem;
-  color: #0ECB81;
+  border: 1px solid rgba(255, 183, 0, 0.3);
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 0.78rem;
   font-weight: 700;
-  margin-bottom: 10px;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
+  margin-bottom: 8px;
+  display: block;
+  width: fit-content;
 }
 
-.solution-card h3 {
-  font-size: 1rem;
-  font-weight: 700;
-  color: #E8E8E8;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  line-height: 1.2;
-}
-
-.solution-card p {
-  color: #C4C4C4;
-  line-height: 1.6;
+.jpmorgan-caption p {
+  color: #B0B0B0;
   font-size: 0.9rem;
-}
-
-.framework-note {
-  text-align: center;
-  padding: 40px;
-  border-top: 1px solid rgba(14, 203, 129, 0.2);
-  margin-top: 60px;
-}
-
-.framework-note p {
-  font-size: 1.2rem;
-  color: var(--text-primary);
+  line-height: 1.65;
   margin: 0;
-  font-weight: 500;
+}
+
+.jpmorgan-caption strong { color: #FFB700; }
+
+/* Post-image copy */
+.solution-copy {
+  max-width: 780px;
+  margin: 0 auto 56px;
+}
+
+.copy-big {
+  font-size: 1.15rem;
+  color: #E8E8E8;
+  font-weight: 600;
+  line-height: 1.75;
+  margin-bottom: 20px;
+}
+
+.copy-big strong { color: #FFB700; }
+
+.copy-challenge {
+  font-size: 1.05rem;
+  color: #C4C4C4;
+  font-style: italic;
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+
+.solution-copy p { color: #C4C4C4; line-height: 1.75; margin-bottom: 14px; }
+.solution-copy strong { color: #FFB700; }
+
+/* Big system announce */
+.moonphase-announce {
+  text-align: center;
+  padding: 60px 32px;
+  margin: 0 auto 64px;
+  max-width: 700px;
+  border: 2px solid rgba(255, 183, 0, 0.35);
+  border-radius: 12px;
+  background: rgba(255, 183, 0, 0.04);
+}
+
+.announce-slash {
+  font-size: 2rem;
+  margin-bottom: 14px;
+}
+
+.announce-pre {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #FFB700;
+  margin-bottom: 10px;
+}
+
+.announce-title {
+  font-size: clamp(2rem, 6vw, 3.5rem) !important;
+  font-weight: 800;
+  background: linear-gradient(135deg, #FFB700 0%, #FFD700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.announce-desc {
+  font-size: 1.05rem;
+  color: #C4C4C4;
+  line-height: 1.75;
+  margin-bottom: 28px;
+}
+
+.announce-desc strong { color: #E8E8E8; }
+
+.gold-text {
+  color: #FFB700;
+  font-weight: 700;
+}
+
+/* Lunar phases */
+.lunar-phases { max-width: 860px; margin: 0 auto; }
+
+.lunar-phases h3 {
+  text-align: center;
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  color: #E8E8E8;
+  margin-bottom: 32px;
+}
+
+.phases-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.phase-card {
+  background: rgba(22, 25, 43, 0.8);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 24px 16px;
+  text-align: center;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.phase-card:hover { transform: translateY(-4px); border-color: rgba(255, 183, 0, 0.3); }
+
+.phase-card.featured {
+  border-color: rgba(242, 54, 69, 0.4);
+  background: rgba(242, 54, 69, 0.05);
+}
+
+.phase-moon { font-size: 2.4rem; display: block; margin-bottom: 10px; }
+
+.phase-card h4 {
+  font-size: 0.9rem;
+  color: #E8E8E8;
+  margin-bottom: 8px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.phase-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 10px;
+}
+
+.phase-tag.bullish { background: rgba(14, 203, 129, 0.15); color: #0ECB81; }
+.phase-tag.neutral { background: rgba(255, 183, 0, 0.15); color: #FFB700; }
+.phase-tag.danger  { background: rgba(242, 54, 69, 0.15); color: #F23645; }
+.phase-tag.bearish { background: rgba(242, 54, 69, 0.1); color: #F23645; }
+
+.phase-card p { color: #A0A0A0; font-size: 0.85rem; line-height: 1.6; margin: 0; }
+
+@media (max-width: 900px) {
+  .phases-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
-  .solution-section {
-    padding: 60px 20px;
-  }
-
-  .solutions-grid {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 15px;
-  }
-
-  .solution-card {
-    padding: 20px;
-  }
-
-  .solution-letter {
-    width: 60px;
-    height: 60px;
-    font-size: 2rem;
-    margin-bottom: 15px;
-  }
-
-  .solution-card h3 {
-    font-size: 1.05rem;
-    margin-bottom: 10px;
-  }
-
-  .solution-card p {
-    font-size: 0.9rem;
-    line-height: 1.6;
-  }
-
-  .framework-note {
-    padding: 30px 20px;
-    margin-top: 40px;
-  }
-
-  .framework-note p {
-    font-size: 1rem;
-  }
-
-  .solution-section .section-header h2 {
-    font-size: clamp(1.5rem, 5vw, 2.2rem);
-  }
+  .solution-section { padding: 60px 20px; }
+  .moonphase-announce { padding: 40px 20px; }
 }
 
 @media (max-width: 480px) {
-  .solution-section {
-    padding: 40px 16px;
-  }
-
-  .solutions-grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-
-  .solution-card {
-    padding: 15px;
-  }
-
-  .solution-letter {
-    width: 55px;
-    height: 55px;
-    font-size: 1.8rem;
-    margin-bottom: 12px;
-  }
-
-  .solution-card h3 {
-    font-size: 0.95rem;
-    margin-bottom: 8px;
-  }
-
-  .solution-card p {
-    font-size: 0.85rem;
-  }
-
-  .framework-note {
-    padding: 25px 16px;
-    margin-top: 30px;
-  }
-
-  .framework-note p {
-    font-size: 0.9rem;
-  }
-
-  .solution-section .section-header h2 {
-    font-size: clamp(1.2rem, 4vw, 1.8rem);
-  }
-}
+  .solution-section { padding: 44px 16px; }
+  .phases-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .phase-card { padding: 16px 10px; }
 }

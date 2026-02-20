@@ -1,81 +1,92 @@
 import { useState } from 'react'
 import './Objections.css'
 
-export default function Objections() {
-  const [openIndex, setOpenIndex] = useState(0)
+const faqs = [
+  {
+    q: 'Sesuai ke untuk saya yang masih trader baharu?',
+    a: 'Ya, sangat sesuai. Sistem ini direka untuk semua peringkat. Trader baharu akan dapat foundation yang kuat dari awal, mengelakkan kesilapan yang biasa dilakukan oleh traders yang belajar teknikal dahulu. Modul kami disusun dari asas ke advance, step-by-step dan mudah difahami.',
+  },
+  {
+    q: 'Saya dah ada pengalaman teknikal analysis. Ini berbeza ke?',
+    a: 'Sangat berbeza. Teknikal analysis bagus untuk tahu "apa yang berlaku". Moonphase System jelaskan "kenapa" ia berlaku. Presidential news spikes, institutional movements, mass psychology — semua ini follow lunar patterns yang teknikal analysis alone tidak boleh detect. Ini adalah lapisan awareness baru yang akan melengkapi pengetahuan teknikal anda.',
+  },
+  {
+    q: 'Ini bukan skim cepat kaya kan?',
+    a: 'Bukan langsung. Kami tidak janjikan keuntungan dalam masa singkat. Ini adalah sistem berasaskan data untuk improve timing, awareness, dan discipline dalam trading. Hasil realistic: steady equity curve, kurang loss akibat blind spots, better entry timing. Ia memerlukan masa, konsistensi, dan proper application.',
+  },
+  {
+    q: 'Moonphase ni ada kaitan dengan mistik atau kepercayaan tertentu?',
+    a: 'Tidak sama sekali. Ini sepenuhnya berasaskan data dan kajian saintifik. Korelasi antara lunar cycles dan market behaviour adalah sesuatu yang telah didokumentasikan oleh institusi kewangan antarabangsa, termasuk JP Morgan. Ini bukan ramalan atau mistik — ini pattern recognition berasaskan data.',
+  },
+  {
+    q: 'Boleh ke saya apply sistem ni pada market selain Gold?',
+    a: 'Sistem kami dioptimumkan untuk Gold XAU/USD yang merupakan market paling dipengaruhi oleh lunar cycles. Walau bagaimanapun, konsep asasnya boleh diapply pada market lain. Kami rekomenkan mulakan dengan Gold dahulu untuk faham korelasi secara mendalam sebelum expand ke market lain.',
+  },
+  {
+    q: 'Macam mana cara nak dapatkan akses selepas beli?',
+    a: 'Selepas pembayaran disahkan, anda akan menerima akses dalam masa 24 jam melalui WhatsApp atau email. Untuk pakej Premium dan Elite, kami akan hubungi anda terus untuk setup akses database dan jadualkan session.',
+  },
+  {
+    q: 'Ada sokongan selepas beli?',
+    a: 'Ya. Semua pakej termasuk akses kepada community traders kami. Pakej Elite mendapat priority support dan direct access kepada team Qolbies. Kami serius tentang kejayaan anda — bukan sekadar jual dan tinggalkan.',
+  },
+]
 
-  const faqs = [
-    {
-      id: 1,
-      question: 'Macam mana moonphase data boleh prevent capital burst?',
-      answer: 'Moonphase system teach kau predict market volatility periods using past lunar data correlation. Tau bila market expansive, bila consolidation. Filter over-trading traps. Bukan magic — it\s awareness of environmental factors yang technical alone tak detect. Dengan lunar timing, kau trade dengan arah and avoid blind spots yang cause burst losses.'
-    },
-    {
-      id: 2,
-      question: 'Saya dah ada technical knowledge, tapi still loss. Ini berbeza ke?',
-      answer: 'Technical bagus untuk what is happening. Moonphase data explain why it happens. Presidential events, mass psychology shifts, lunar impacts — semua ni create pattern repeats dalam cycles. Ebook teach environmental awareness yang unlock steady equity curve even dengan full margin styles. Technical + moonphase = stronger direction system.'
-    },
-    {
-      id: 3,
-      question: 'Gimme mana control trading psychology dengan system ni?',
-      answer: 'System ajar kau reset mindset. Small step guiding untuk win back confidence. Aware bila kau trade with stress, sadness, atau too happy — semua affect decisions. Moonphase activity help reset mood. Real account strategies untuk regain equity steadily instead of burst attempts. Discipline comes from understand market behavior, not guessing.'
-    },
-    {
-      id: 4,
-      question: 'Saya risau overtrade and full margin burst. Safe ke system ni?',
-      answer: 'System specifically address overtrade awareness. Check moonphase before trade untuk tau bila market traps. Start small capital first, feel trade warmth, have backup capital. Lunar data + technical filtering = confident TP points. Works even high risk styles sebab kau aware of ranges and volatility patterns ahead.'
-    },
-    {
-      id: 5,
-      question: 'Bukan skim cepat kaya kan? What\s realistic expectation?',
-      answer: 'Bukan get-rich-quick. Kita tak janji perfect win streaks or meteoric profits. Real expectation: steady equity curve growth, better direction awareness, fewer blind spot losses. Moonphase data help predict ranges — bukan guarantee wins. Kau still need discipline, capital management, proper execution. System gives confident framework, bukan magic formula.'
-    },
-    {
-      id: 6,
-      question: 'Berapa lama untuk master system dan nampak improvement?',
-      answer: 'E-course format buat kau understand basics dalam 1-2 weeks. Apply on small capital first month. Traders report aware market direction better within 3-4 weeks. Real steady profit? 2-3 bulan dengan consistent application. Remember: secure reserves capital first (money-lock suggestion), avoid double directions, trade relax mood. Patience beats burst attempts.'
-    }
-  ]
+export default function Objections() {
+  const [openIndex, setOpenIndex] = useState(null)
 
   return (
     <section className="objections-section" id="faq">
       <div className="container">
         <div className="section-header">
-          <h2>Soalan Lazim</h2>
-          <p>Semua yang perlu kau ketahu sebelum beli ebook</p>
+          <div className="section-badge">❓ SOALAN LAZIM</div>
+          <h2>
+            Soalan Yang Selalu<br />
+            Ditanya
+          </h2>
+          <p>
+            Semua yang anda perlu tahu sebelum memulakan perjalanan trading
+            yang betul.
+          </p>
         </div>
 
         <div className="faq-container">
           {faqs.map((faq, index) => (
-            <div 
-              key={faq.id} 
-              className="faq-item"
-            >
+            <div key={index} className="faq-item">
               <button
                 className={`faq-question ${openIndex === index ? 'open' : ''}`}
-                onClick={() => setOpenIndex(openIndex === index ? -1 : index)}
+                onClick={() => setOpenIndex(openIndex === index ? null : index)}
               >
                 <span className="faq-icon">{openIndex === index ? '−' : '+'}</span>
-                {faq.question}
+                {faq.q}
               </button>
-              
               {openIndex === index && (
                 <div className="faq-answer">
-                  <p>{faq.answer}</p>
+                  <p>{faq.a}</p>
                 </div>
               )}
             </div>
           ))}
         </div>
 
-        <div className="faq-cta">
-          <p>Still have questions? Tanya kami directly.</p>
-          <button 
-            className="btn btn-secondary"
-            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-          >
-            Contact Us →
-          </button>
+        <div className="faq-contact" id="contact">
+          <p>Masih ada soalan? Hubungi kami terus.</p>
+          <div className="faq-contact-btns">
+            <a
+              href="https://wa.me/60112167672"
+              className="btn btn-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              💬 WhatsApp Kami
+            </a>
+            <a
+              href="mailto:support@qolbiestrading.com"
+              className="btn btn-secondary"
+            >
+              📧 Email Kami
+            </a>
+          </div>
         </div>
       </div>
     </section>

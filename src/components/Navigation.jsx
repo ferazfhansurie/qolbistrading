@@ -1,19 +1,23 @@
+import { useState } from 'react'
 import './Navigation.css'
 
 export default function Navigation() {
+  const [menuOpen, setMenuOpen] = useState(false)
+
   const scrollToSection = (id) => {
     const element = document.getElementById(id)
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })
     }
+    setMenuOpen(false)
   }
 
   const navItems = [
     { id: 'home', label: 'Home' },
-    { id: 'solution', label: 'Sistem' },
-    { id: 'proof', label: 'Hasil' },
-    { id: 'pricing', label: 'Harga' },
-    { id: 'services', label: 'Kandungan' }
+    { id: 'sistem', label: 'Sistem' },
+    { id: 'testimoni', label: 'Testimoni' },
+    { id: 'produk', label: 'Produk' },
+    { id: 'faq', label: 'FAQ' },
   ]
 
   return (
@@ -22,7 +26,8 @@ export default function Navigation() {
         <div className="nav-logo">
           <span className="logo-text">🌙 Qolbies Trading</span>
         </div>
-        <div className="nav-items">
+
+        <div className={`nav-items ${menuOpen ? 'open' : ''}`}>
           {navItems.map((item) => (
             <button
               key={item.id}
@@ -33,11 +38,20 @@ export default function Navigation() {
             </button>
           ))}
         </div>
+
         <button
-          className="btn btn-primary"
-          onClick={() => scrollToSection('pricing')}
+          className="btn btn-primary nav-cta"
+          onClick={() => scrollToSection('produk')}
         >
-          APA ITU QOLBIES
+          DAFTAR SEKARANG
+        </button>
+
+        <button
+          className="nav-hamburger"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
+          {menuOpen ? '✕' : '☰'}
         </button>
       </div>
     </nav>

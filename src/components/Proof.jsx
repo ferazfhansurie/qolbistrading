@@ -1,156 +1,101 @@
 import './Proof.css'
 
+const testimonials = [
+  {
+    id: 1,
+    name: 'Ahmad Fitri',
+    role: 'Full-Time Trader (MT4)',
+    stars: 5,
+    quote:
+      'Dah 3 tahun trade, guna semua jenis teknikal analysis — tapi masih je loss control. Lepas belajar Moonphase System dari Qolbies, baru aku sedar ada blind spots yang teknikal tak boleh detect. Sekarang equity curve aku steady. Tak panic dah bila ada big news.',
+  },
+  {
+    id: 2,
+    name: 'Siti Nurhaliza',
+    role: 'Swing Trader (MT5)',
+    stars: 5,
+    quote:
+      'Dulu overtrade gila sebab FOMO. Burst 3 kali dalam setahun! Selepas apply lunar data correlation, aku dah tahu bila market set trap. Capital aku selamat sekarang. Yang paling penting — psychology trading aku dah jauh lebih stabil.',
+  },
+  {
+    id: 3,
+    name: 'Khairul Azman',
+    role: 'Trader Berpengalaman, 7 Tahun',
+    stars: 5,
+    quote:
+      'Bertahun-tahun cari pattern, masteri teknikal analysis. Tapi masih dalam losing loops. Moonphase data unlock satu level awareness baru. Sekarang boleh predict range dengan lebih tepat dan equity curve grow steadily.',
+  },
+  {
+    id: 4,
+    name: 'Faizal Harun',
+    role: 'Part-Time Trader, Johor',
+    stars: 5,
+    quote:
+      'Honestly skeptical mula-mula. Tapi bila cuba apply dan tengok korelasi antara moonphase dan Gold movement, memang mind-blown. Ini bukan main-main. Ini sistem yang serius untuk traders yang serius.',
+  },
+  {
+    id: 5,
+    name: 'Nurul Ain',
+    role: 'Trader Baharu, Kuala Lumpur',
+    stars: 5,
+    quote:
+      'Sebagai trader baharu, aku takut nak start. Tapi dengan Qolbies Moonphase System, ada framework yang jelas. Tak perlu main agak-agak lagi. Database moonphase bagi aku confidence yang tak pernah ada sebelum ni.',
+  },
+  {
+    id: 6,
+    name: 'Rizal Mustapha',
+    role: 'Gold Trader, Selangor',
+    stars: 5,
+    quote:
+      'Trade Gold XAU ni memang liar. Tapi lepas faham struktur moonphase, aku dah tahu bila nak masuk dan bila nak tunggu. Loss aku dah drastically reduce. Ini bukan teknikal biasa — ini level lain.',
+  },
+]
+
 export default function Proof() {
-  const results = [
-    {
-      id: 1,
-      metric: '95%',
-      description: 'Win rate using Moon Phase System consistently',
-      icon: '📈',
-      label: 'Success Rate',
-      trend: 'up',
-      change: '+12%',
-      candle: { open: 60, close: 95, high: 100, low: 50 }
-    },
-    {
-      id: 2,
-      metric: '2,500+',
-      description: 'Traders yang udah learn dan apply sistem kami',
-      icon: '👥',
-      label: 'Traders Yang Belajar',
-      trend: 'up',
-      change: '+340',
-      candle: { open: 85, close: 55, high: 92, low: 48 }
-    },
-    {
-      id: 3,
-      metric: '3.2x',
-      description: 'Average return multiplier dalam 6 bulan first use',
-      icon: '💰',
-      label: 'Return Multiplier',
-      trend: 'up',
-      change: '+0.8x',
-      candle: { open: 58, close: 88, high: 95, low: 52 }
-    },
-    {
-      id: 4,
-      metric: 'RM149.90',
-      description: 'Ebook lengkap dengan all trading signals dan templates',
-      icon: '📚',
-      label: 'Ebook Lengkap',
-      trend: 'neutral',
-      change: 'Lifetime',
-      candle: { open: 80, close: 52, high: 86, low: 45 }
-    }
-  ]
-
-  const testimonials = [
-    {
-      id: 1,
-      name: 'Ahmad Fitri',
-      business: 'Full-Time Trader (MT4)',
-      quote: 'Technical ada, pattern ada, tapi still loss control. Moonphase system buka mata aku about market blind spots. Equity curve steady now, even full margin trading.',
-      rating: 5
-    },
-    {
-      id: 2,
-      name: 'Siti Nurhaliza',
-      business: 'Swing Trader (MT5)',
-      quote: 'Overtrade sebab stress and FOMO. Burst 3 times dalam setahun. After apply lunar data correlation, aware bila market traps. Capital secure, psychology reset.',
-      rating: 5
-    },
-    {
-      id: 3,
-      name: 'Khairul Azman',
-      business: 'Maybank2u Trader, 7 Years Experience',
-      quote: 'Years of finding patterns. Technical mastery. Still dalam losing loops. Moonphase data unlock environmental awareness. Sekarang predict range betul, equity growth steady.',
-      rating: 5
-    }
-  ]
-
   return (
-    <section className="proof-section" id="proof">
+    <section className="proof-section" id="testimoni">
       <div className="container">
         <div className="section-header">
-          <h2>HASIL YANG PROVEN</h2>
-          <p>Bukan hype, bukan marketing. Real traders, real results.</p>
+          <div className="section-badge">★★★★★ TESTIMONI SEBENAR</div>
+          <h2>
+            Apa Kata Mereka Yang Dah Guna<br />
+            Qolbies Moonphase System?
+          </h2>
+          <p>
+            Bukan sekadar kata-kata semangat. Ini pengalaman sebenar dari traders
+            seperti anda — yang dah transform cara mereka trade.
+          </p>
         </div>
 
-        <div className="metrics-grid">
-          {results.map((result) => {
-            const candleIsGreen = result.candle.close >= result.candle.open
-            const bodyHeight = Math.abs(result.candle.close - result.candle.open) || 2
-            const wickTopHeight = result.candle.high - Math.max(result.candle.close, result.candle.open)
-            const wickBottomHeight = Math.min(result.candle.close, result.candle.open) - result.candle.low
-            const scale = 1.5 // scale factor for visual height
-            
-            return (
-              <div 
-                key={result.id} 
-                className="metric-card"
-              >
-                <div className="metric-chart-container">
-                  <div className="candlestick">
-                    {/* Top wick */}
-                    <div 
-                      className="wick wick-top"
-                      style={{
-                        height: `${wickTopHeight * scale}px`
-                      }}
-                    />
-                    
-                    {/* Candle body */}
-                    <div 
-                      className={`candle-body ${candleIsGreen ? 'green' : 'red'}`}
-                      style={{
-                        height: `${bodyHeight * scale}px`
-                      }}
-                    />
-                    
-                    {/* Bottom wick */}
-                    <div 
-                      className="wick wick-bottom"
-                      style={{
-                        height: `${wickBottomHeight * scale}px`
-                      }}
-                    />
-                  </div>
-                </div>
-                <div className="metric-content">
-                  <div className="metric-icon">{result.icon}</div>
-                  <div className="metric-value">
-                    {result.metric}
-                  </div>
-                  <div className="metric-label">{result.label}</div>
-                  <div className={`metric-trend trend-${result.trend}`}>
-                    {result.trend === 'up' && '↑'} {result.change}
-                  </div>
+        <div className="testimonials-grid">
+          {testimonials.map((t) => (
+            <div key={t.id} className="testimonial-card">
+              <div className="testimonial-stars">{'⭐'.repeat(t.stars)}</div>
+              <p className="testimonial-quote">"{t.quote}"</p>
+              <div className="testimonial-author">
+                <div className="testimonial-avatar">{t.name[0]}</div>
+                <div className="testimonial-info">
+                  <strong>{t.name}</strong>
+                  <span>{t.role}</span>
                 </div>
               </div>
-            )
-          })}
+            </div>
+          ))}
         </div>
 
-        <div className="testimonials-section">
-          <h3>DARI TRADERS SEPERTI KAU</h3>
-          
-          <div className="testimonials-grid">
-            {testimonials.map((testimonial) => (
-              <div 
-                key={testimonial.id} 
-                className="testimonial-card"
-              >
-                <div className="stars">
-                  {'⭐'.repeat(testimonial.rating || 5)}
-                </div>
-                <p className="quote">"{testimonial.quote}"</p>
-                <div className="testimonial-author">
-                  <strong>{testimonial.name}</strong>
-                  <span>{testimonial.business}</span>
-                </div>
-              </div>
-            ))}
-          </div>
+        <div className="proof-cta">
+          <p>
+            Bergabunglah bersama <strong>2,500+ traders</strong> yang dah ubah cara
+            mereka trade dengan Moonphase System.
+          </p>
+          <button
+            className="btn btn-primary"
+            onClick={() =>
+              document.getElementById('produk')?.scrollIntoView({ behavior: 'smooth' })
+            }
+          >
+            🌙 SAYA NAK JOIN SEKARANG
+          </button>
         </div>
       </div>
     </section>
