@@ -305,6 +305,12 @@
 
 /* ── Mobile ── */
 @media (max-width: 768px) {
+    .hero-cta .btn {
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      font-size: 1rem;
+    }
   .hero {
     padding: 80px 20px 36px;
   }
@@ -340,6 +346,12 @@
 }
 
 @media (max-width: 480px) {
+    .hero-cta .btn {
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      font-size: 0.95rem;
+    }
   .hero {
     padding: 72px 16px 32px;
   }
