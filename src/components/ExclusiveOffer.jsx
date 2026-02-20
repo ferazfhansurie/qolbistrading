@@ -46,8 +46,8 @@ const products = [
     id: 3,
     tier: 'ELITE',
     name: 'Private Class — Mega Discussion',
-    price: 'RM 997',
-    originalPrice: 'RM 2,500',
+    price: 'RM 6,699',
+    originalPrice: 'RM 12,000',
     badge: '💎 PALING COMPREHENSIVE',
     featured: false,
     desc: 'Khas untuk traders yang serius dan menghadapi isu kritikal. One-on-one dan group discussion bersama team Qolbies.',
@@ -75,15 +75,10 @@ export default function ExclusiveOffer() {
       <div className="container">
 
         <div className="section-header">
-          <div className="section-badge">💰 PILIH PAKEJ ANDA</div>
+          <div className="section-badge">⚠️ Amaran Penting Untuk Trader</div>
           <h2>
-            Mulakan Perjalanan Trading<br />
-            Anda Bersama Qolbies
+            75% Trader Rugi Teruk Semasa Spike News Presiden U.S — Sebab Tidak Tahu Teknik Bulan
           </h2>
-          <p>
-            3 pakej direka khas untuk memenuhi keperluan traders di peringkat
-            yang berbeza.
-          </p>
         </div>
 
         <div className="products-grid">
