@@ -55,8 +55,8 @@ export default function Hero() {
           <h1 className="hero-title">
             U.S. Presidential News Spikes<br />
             <span className="hero-title-highlight">Destroy 75% of Traders</span><br />
-            — Are You Trading Without<br />
-            Moonphase Awareness?
+            ....Are you trading using the MoonPhase System?<br />
+
           </h1>
 
           <div className="hero-subheadlines">
