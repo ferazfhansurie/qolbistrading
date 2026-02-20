@@ -75,9 +75,10 @@ export default function ExclusiveOffer() {
       <div className="container">
 
         <div className="section-header">
-          <div className="section-badge">⚠️ Amaran Penting Untuk Trader</div>
+          <div className="section-badge">💰 Pilih Pakej Trading Anda</div>
           <h2>
-            75% Trader Rugi Teruk Semasa Spike News Presiden U.S — Sebab Tidak Tahu Teknik Bulan
+            Setiap trader ada keperluan berbeza....<br />
+            pilih pakej yang paling sesuai untuk perjalanan trading anda.<br />
           </h2>
         </div>
 
@@ -97,12 +98,14 @@ export default function ExclusiveOffer() {
                   <li key={idx}>{item}</li>
                 ))}
               </ul>
-              <button
+              <a
+                href="https://toyyibpay.com/Moon-Phase-Trading-E-book"
+                target="_blank"
+                rel="noopener noreferrer"
                 className={`btn ${p.featured ? 'btn-primary' : 'btn-secondary'} btn-full`}
-                onClick={scrollToContact}
               >
                 {p.cta}
-              </button>
+              </a>
             </div>
           ))}
         </div>
