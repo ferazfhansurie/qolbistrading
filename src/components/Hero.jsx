@@ -55,7 +55,7 @@ export default function Hero() {
           <h1 className="hero-title">
             U.S. Presidential News Spikes<br />
             <span className="hero-title-highlight">Destroy 75% of Traders</span><br />
-            ..tahukah ada cara trading based on the <span style={{color:'#FFB700'}}>moon</span>?<br />
+            ..sebab tak tengok <span style={{color:'#FFB700'}}>BULAN</span>?<br />
 
           </h1>
 
