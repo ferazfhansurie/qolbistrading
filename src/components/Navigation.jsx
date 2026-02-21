@@ -44,7 +44,7 @@ export default function Navigation() {
           onClick={() => scrollToSection('tentang')}
         >
           APA ITU QOLBIES?
-        </button
+        </button>
 
         <button
           className="nav-hamburger"
