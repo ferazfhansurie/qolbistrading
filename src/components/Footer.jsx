@@ -17,7 +17,7 @@ export default function Footer() {
             </p>
             <div className="footer-contacts">
               <a
-                href="https://wa.me/60112167672"
+                href="https://wa.me/60178953047?text=Hi%20Qolbies%20Trading,%20I%20want%20to%20buy%20the%20Moon%20Phase%20Trading%20Ebook"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -45,8 +45,8 @@ export default function Footer() {
               <h4>Produk</h4>
               <ul>
                 <li><a href="#produk">Ebook + Guiding Signal</a></li>
-                <li><a href="#produk">Moonphase Database 6 Bulan</a></li>
-                <li><a href="#produk">Private Class</a></li>
+                <li><a href="https://toyyibpay.com/Moonphase-Database-6-Bulan" target="_blank" rel="noopener noreferrer">Moonphase Database 6 Bulan</a></li>
+                <li><a href="https://toyyibpay.com/Private-Class-Mega-Discussion" target="_blank" rel="noopener noreferrer">Private Class</a></li>
               </ul>
             </div>
           </div>

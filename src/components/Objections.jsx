@@ -73,7 +73,7 @@ export default function Objections() {
           <p>Masih ada soalan? Hubungi kami terus.</p>
           <div className="faq-contact-btns">
             <a
-              href="https://wa.me/60112167672"
+              href="https://wa.me/60178953047?text=Hi%20Qolbies%20Trading,%20I%20have%20a%20question%20about%20the%20Moon%20Phase%20Trading%20System"
               className="btn btn-primary"
               target="_blank"
               rel="noopener noreferrer"

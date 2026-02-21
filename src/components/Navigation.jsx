@@ -40,11 +40,11 @@ export default function Navigation() {
         </div>
 
         <button
-          className="btn btn-primary nav-cta"
-          onClick={() => scrollToSection('produk')}
+          className="btn btn-primary nav-cta nav-cta-mobile"
+          onClick={() => scrollToSection('tentang')}
         >
-          DAFTAR SEKARANG
-        </button>
+          APA ITU QOLBIES?
+        </button
 
         <button
           className="nav-hamburger"
