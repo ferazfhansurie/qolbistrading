@@ -20,6 +20,7 @@ const products = [
       '🛡️ 30-Hari Money Back Guarantee',
     ],
     cta: 'DAPATKAN EBOOK SEKARANG',
+    link: 'https://toyyibpay.com/Moon-Phase-Trading-E-book',
   },
   {
     id: 2,
@@ -41,6 +42,7 @@ const products = [
       '🛡️ 30-Hari Money Back Guarantee',
     ],
     cta: 'AKSES DATABASE SEKARANG',
+    link: 'https://toyyibpay.com/Moonphase-Database-6-Bulan',
   },
   {
     id: 3,
@@ -62,6 +64,7 @@ const products = [
       '🛡️ 30-Hari Money Back Guarantee',
     ],
     cta: 'DAFTAR PRIVATE CLASS',
+    link: 'https://toyyibpay.com/Private-Class-Mega-Discussion',
   },
 ]
 
@@ -99,7 +102,7 @@ export default function ExclusiveOffer() {
                 ))}
               </ul>
               <a
-                href="https://toyyibpay.com/Moon-Phase-Trading-E-book"
+                href={p.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`btn ${p.featured ? 'btn-primary' : 'btn-secondary'} btn-full`}
