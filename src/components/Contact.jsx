@@ -14,7 +14,7 @@ export default function Contact() {
             <div className="info-item">
               <div className="info-icon">💬</div>
               <h3>WhatsApp</h3>
-              <p><a href="https://api.whatsapp.com/send?phone=60178953047&text=Hi%20Qolbies%20Trading,%20I%20want%20to%20buy%20the%20Moon%20Phase%20Trading%20Ebook" target="_blank" rel="noopener noreferrer">+60 17-895 3047</a></p>
+              <p><a href="https://api.whatsapp.com/send?phone=601117956010&text=Hi%20Qolbies%20Trading,%20I%20want%20to%20buy%20the%20Moon%20Phase%20Trading%20Ebook" target="_blank" rel="noopener noreferrer">+60 17-895 3047</a></p>
             </div>
             <div className="info-item">
               <div className="info-icon">📧</div>
@@ -30,7 +30,7 @@ export default function Contact() {
 
           <div className="whatsapp-cta">
             <a 
-              href="https://api.whatsapp.com/send?phone=60178953047&text=Hi%20Qolbies%20Trading,%20I%20want%20to%20buy%20the%20Moon%20Phase%20Trading%20Ebook%20RM149.90" 
+              href="https://api.whatsapp.com/send?phone=601117956010&text=Hi%20Qolbies%20Trading,%20I%20want%20to%20buy%20the%20Moon%20Phase%20Trading%20Ebook%20RM149.90" 
               target="_blank" 
               rel="noopener noreferrer"
               className="btn btn-primary"

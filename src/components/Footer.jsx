@@ -17,11 +17,11 @@ export default function Footer() {
             </p>
             <div className="footer-contacts">
               <a
-                href="https://wa.me/60178953047?text=Hi%20Qolbies%20Trading,%20I%20want%20to%20buy%20the%20Moon%20Phase%20Trading%20Ebook"
+                href="https://wa.me/601117956010?text=Hi%20Qolbies%20Trading,%20I%20want%20to%20buy%20the%20Moon%20Phase%20Trading%20Ebook"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                💬 +60 17-895 3047 (WhatsApp)
+                💬 +60 11-1795 6010 (WhatsApp)
               </a>
               <a href="mailto:adminmasterprince63@qolbiestrading.com">
                 📧 adminmasterprince63@qolbiestrading.com
